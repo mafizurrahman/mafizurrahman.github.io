@@ -1,36 +1,104 @@
-# My Personal Profile
+<!DOCTYPE html>
+<html lang="en">
 
-## About Me
-Hello! I'm [Your Name], a [your profession or interests]. I have a passion for [your interests or hobbies], and I love exploring new technologies.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Name] - [Your Profession]</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
 
-## Skills
-- Programming Languages: Python, JavaScript
-- Frameworks: TensorFlow, React
-- Other Skills: [Any other skills you want to highlight]
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
 
-## Projects
-### Project 1: [Project Name 1]
-I recently worked on [brief description of Project 1]. You can find more details in the [Project Name 1 directory](./Project1/).
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s;
+        }
 
-### Project 2: [Project Name 2]
-In my spare time, I've been involved in [brief description of Project 2]. Check out the [Project Name 2 repository](https://github.com/yourusername/project2).
+        h1 {
+            color: #333;
+        }
 
-## Education
-- [Your University or School], [Degree], [Year of Graduation]
+        h2 {
+            color: #333;
+        }
 
-## Certifications
-- [Certification Name], [Issuing Organization], [Year]
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
 
-## Contact
-- **Email:** [your.email@example.com]
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/yourusername/)
-- **GitHub:** [Your GitHub Profile](https://github.com/yourusername/)
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-## Interests
-I enjoy [your hobbies or interests]. Whether it's coding, reading, or exploring the great outdoors, I'm always up for an adventure.
+        a:hover {
+            text-decoration: underline;
+        }
 
-Feel free to reach out, and let's connect!
+        /* Light theme */
+        .light-theme {
+            background-color: #f5f5f5;
+        }
 
----
+        .light-theme section {
+            background-color: white;
+        }
 
-Thank you for visiting my personal profile! 😊
+        /* Dark theme */
+        .dark-theme {
+            background-color: #333;
+            color: white;
+        }
+
+        .dark-theme section {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="light-theme">
+
+    <header>
+        <h1>[Your Name]</h1>
+        <p>[Your Profession]</p>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Hello! I'm [Your Name], a passionate [Your Profession]. I have a keen interest in [Your Interests or Hobbies],
+            and I thrive on exploring new technologies to stay at the forefront of innovation.</p>
+    </section>
+
+    <!-- ... Rest of your content ... -->
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('light-theme');
+            body.classList.toggle('dark-theme');
+        }
+    </script>
+
+</body>
+
+</html>
