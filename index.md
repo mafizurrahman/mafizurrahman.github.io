@@ -3,6 +3,9 @@ layout: default
 title: Welcome to My Website
 ---
 
+<link rel="stylesheet" href="styles.css">
+
+
 # Welcome to My Website
 
 ## About Me
