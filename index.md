@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Welcome to My Website
+title: Welcome to My Personal Website
 ---
 
 <link rel="stylesheet" href="styles.css">
