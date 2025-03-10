@@ -22,12 +22,12 @@
             padding: 40px 0;
             background: url('back.jpg') center/cover no-repeat;
             color: white;
-            min-height: 200px;
+            min-height: 300px;
         }
         .social-links a {
-            margin: 0 10px;
+            margin: 0 15px;
             color: white;
-            font-size: 2rem;
+            font-size: 2.2rem;
         }
         .about-education {
             display: flex;
@@ -38,7 +38,7 @@
             padding: 40px 0;
         }
         .about-content, .education-content {
-            width: 50%;
+            width: 48%;
             padding: 20px;
             border-radius: 10px;
             background: #f8f9fa;
@@ -59,8 +59,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        .education-content h2 i {
             color: #007bff;
         }
         @keyframes fadeIn {
@@ -88,6 +86,15 @@
         .feature-card img {
             width: 100%;
             border-radius: 10px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -121,23 +128,31 @@
         </div>
     </nav>
     
-    <section id="about-education" class="section">
-        <div class="container about-education">
-            <div class="about-content">
-                <img src="profile.jpg" alt="Mafizur Rahman">
-                <h2>About Me</h2>
-                <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) and I am passionate about developing efficient AI models optimized for neuromorphic hardware.</p>
-            </div>
-            <div class="education-content">
-                <h2><i class="fas fa-university"></i> Education</h2>
-                <p><strong>Prairie View A&M University, Texas, USA</strong> (Expected Dec 2028)</p>
-                <p>Ph.D. in Electrical Engineering</p>
-                <p>Advisor: Prof. Dr. Lijun Qian</p>
-                <p><strong>Prairie View A&M University, Texas, USA</strong> (Aug 2023 – Dec 2024)</p>
-                <p>M.Sc in Computer Science | <strong>CGPA: 4.0/4.0</strong></p>
-                <p><em>Thesis:</em> Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
+    <section id="features" class="section">
+        <div class="container">
+            <h2 class="text-center">Featured Topics</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="feature1.jpg" alt="Deep Learning">
+                    <h3>Deep Learning Applications</h3>
+                    <p>Exploring AI advancements in real-world tasks like image recognition and predictive modeling.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="feature2.jpg" alt="AI Optimization">
+                    <h3>AI Model Optimization</h3>
+                    <p>Enhancing efficiency through model compression, quantization, and optimization techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="feature3.jpg" alt="Neurocomputing">
+                    <h3>Neurocomputing Advances</h3>
+                    <p>Innovative approaches bridging AI and brain-inspired computation for future technologies.</p>
+                </div>
             </div>
         </div>
     </section>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Mafizur Rahman. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
