@@ -18,32 +18,18 @@
             color: white !important;
         }
         .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
             padding: 40px 0;
             background: url('back.jpg') center/cover no-repeat;
             color: white;
-            min-height: 300px;
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            max-width: 900px;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
+            min-height: 200px;
         }
         .profile-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin-right: 20px;
-        }
-        .about-text {
-            color: white;
-            text-align: left;
+            display: block;
+            margin: 0 auto 20px;
         }
         .social-links a {
             margin: 0 10px;
@@ -67,18 +53,13 @@
 </head>
 <body>
     <header class="header-content">
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
-            <div class="about-text">
-                <h1>Mafizur Rahman</h1>
-                <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
-                <div class="social-links">
-                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
+        <h1>Mafizur Rahman</h1>
+        <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
+        <div class="social-links">
+            <a href="#"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
     
@@ -104,6 +85,7 @@
     
     <section id="about" class="section text-center">
         <div class="container">
+            <img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
             <h2>About Me</h2>
             <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing.</p>
             <a class="btn btn-primary" href="#publications">View Publications</a>
