@@ -69,26 +69,229 @@
             color: #007bff;
         }
 
-        .experience-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .section h2 {
+        /* Start of new experience section styles */
+        .section-title {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            opacity: 0.2;
+        }
+
+        .experience-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #3498db;
             animation: fadeIn 1s ease-in-out;
         }
 
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
 
+        .experience-card:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -36px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #3498db;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+            z-index: 1;
+        }
 
+        .experience-header {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
 
+        .logo-container {
+            width: 60px;
+            height: 60px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
 
+        .exp-logo {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
 
-        
+        .title-container {
+            flex-grow: 1;
+        }
+
+        .position {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .organization {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .location-date {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .location i, .date i {
+            margin-right: 5px;
+        }
+
+        .achievements {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .achievements li {
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .achievements li:last-child {
+            margin-bottom: 0;
+        }
+
+        .achievements li::before {
+            content: '✓';
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .achievements strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .timeline:before {
+                left: 50%;
+                margin-left: -1.5px;
+            }
+            
+            .experience-card {
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .experience-card:nth-child(odd) {
+                margin-right: 55%;
+            }
+            
+            .experience-card:nth-child(even) {
+                margin-left: 55%;
+            }
+            
+            .experience-card:before {
+                left: auto;
+                right: -36px;
+            }
+            
+            .experience-card:nth-child(odd):before {
+                left: -36px;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .timeline:before {
+                left: 18px;
+            }
+            
+            .experience-card {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .experience-card:before {
+                left: -36px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            .location-date {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        /* End of new experience section styles */
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -115,15 +318,6 @@
             width: 100%;
             border-radius: 10px;
         }
-
-
-            .exp-logo {
-            width: 30px; /* Adjust size as needed */
-            height: 30px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        
         
         .footer {
             background-color: #343a40;
@@ -193,7 +387,7 @@
                 <div class="feature-card">
                     <img src="spotlight.png" alt="Deep Learning">
                     <h3>Research Spotlight</h3>
-                    <p>My research work has been featured in Prairie View A&M University’s Student Spotlight for my research on
+                    <p>My research work has been featured in Prairie View A&M University's Student Spotlight for my research on
 analog accelerators for deep neural networks (DNNs).</p>
                 </div>
                 <div class="feature-card">
@@ -206,64 +400,92 @@ analog accelerators for deep neural networks (DNNs).</p>
                     <h3>Neurocomputing Advances</h3>
                     <p>Innovative approaches bridging AI and brain-inspired computation for future technologies.</p>
                 </div>
+            </div>
     </section>
 
-
+<!-- New Experience Section -->
 <section id="experience" class="section">
     <div class="container">
-        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
         
-        <div class="experience-card">
-            <h4>
-                <img src="pvamu.jpg" alt="CREDIT Center Logo" class="exp-logo">
-                <strong>Graduate Research Assistant</strong> | 
-                <em style="font-size: 0.7em;">
-                    CREDIT Center, Prairie View A & M University, Texas, USA
-                </em> 
-                <span class="float-end" style="font-size: 0.5em;">Sep 2023 – Present</span>
-            </h4>
-            <ul>
-                <li>Collaborated with Sandia National Labs to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, reaching 98% of digital performance.</li>
-                <li>Converted pretrained digital DNNs to analog DNNs in the presence of hardware nonlinearities for image classification, maintaining 98-99% accuracy on benchmark datasets.</li>
-            </ul>
-        </div>
-
-        <div class="experience-card">
-            <h4>
-                <img src="BU.png" alt="Baylor University Logo" class="exp-logo">
-                <strong>Graduate Research Assistant</strong> | 
-                <em style="font-size: 0.7em;">
-                    Baylor University, Texas, USA
-                </em> 
-                <span class="float-end" style="font-size: 0.5em;">Jan 2022 – Dec 2022</span>
-            </h4>
-            <ul>
-                <li>Explored Human ES and IMR90 Fibroblasts cells, unveiling 100% interaction frequency for chromosome 07.</li>
-                <li>Identified min absolute value scaling as the optimal Hi-C dataset normalization.</li>
-            </ul>
-        </div>
-
-        <div class="experience-card">
-            <h4>
-                <img src="ewu.png" alt="East West University Logo" class="exp-logo">
-                <strong>Undergraduate Teaching Assistant</strong> | 
-                <em style="font-size: 0.7em;">
-                    East West University, Dhaka, Bangladesh
-                </em> 
-                <span class="float-end" style="font-size: 0.5em;">Sep 2018 – Apr 2020</span>
-            </h4>
-            <ul>
-                <li>Assisted students during lab classes and developed lab manuals for courses such as Structured Programming, Numerical Methods, and Discrete Mathematics.</li>
-                <li>Guided students in understanding complex programming concepts, improving their practical knowledge.</li>
-            </ul>
+        <div class="timeline">
+            <!-- CREDIT Center Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="pvamu.jpg" alt="CREDIT Center Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Graduate Research Assistant</h3>
+                        <h4 class="organization">CREDIT Center, Prairie View A&M University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> September 2023 – Present</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Collaborated with <strong>Sandia National Labs</strong> to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, achieving <strong>98%</strong> of digital performance benchmarks.</li>
+                        <li>Successfully implemented conversion of pretrained digital DNNs to analog DNNs while managing hardware nonlinearities for image classification, maintaining <strong>98-99% accuracy</strong> on benchmark datasets.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Baylor University Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="BU.png" alt="Baylor University Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Graduate Research Assistant</h3>
+                        <h4 class="organization">Baylor University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> January 2022 – December 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Conducted comprehensive research on Human ES and IMR90 Fibroblasts cells, discovering <strong>100%</strong> interaction frequency for chromosome 07.</li>
+                        <li>Performed comparative analysis of normalization techniques for Hi-C datasets, identifying <strong>minimum absolute value scaling</strong> as the optimal methodology.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- East West University Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="ewu.png" alt="East West University Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Undergraduate Teaching Assistant</h3>
+                        <h4 class="organization">East West University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> September 2018 – April 2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Developed comprehensive lab manuals and instructional materials for courses including <strong>Structured Programming</strong>, <strong>Numerical Methods</strong>, and <strong>Discrete Mathematics</strong>.</li>
+                        <li>Provided personalized guidance to students during laboratory sessions, significantly enhancing their practical understanding of complex programming concepts.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
-
                 
     <footer class="footer">
         <p>&copy; 2025 Mafizur Rahman. All Rights Reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
