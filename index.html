@@ -30,119 +30,267 @@
             font-size: 1.2rem;
         }
       
-        .about-education {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            text-align: left;
-            gap: 30px;
-            padding: 40px 0;
-        }
+.about-education {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 30px;
+    padding: 40px 0;
+}
 
-        .about-content, .education-content {
-            width: 48%;
-            padding: 20px;
-            border-radius: 10px;
-            background: #f8f9fa;
-            margin-left: 0; 
-            text-align: justify;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+.about-content, .education-content {
+    width: 48%;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    margin-left: 0; 
+    text-align: justify;
+}
 
-        .about-content:hover, .education-content:hover {
-            transform: translateY(-5px);
-        }
-
-        .about-content img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px auto;
-            border: 3px solid #0056b3;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-content h2, .education-content h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .about-content p {
-            line-height: 1.6;
-            font-size: 16px;
-            color: #333;
-        }
+.about-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+    
+}
 
         .education-content {
             background: #f8f9fa;
             color: black;
             animation: fadeIn 1s ease-in-out;
         }
-
-        .education-item {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .education-item:last-child {
-            border-bottom: none;
-        }
-
-        .degree {
-            font-size: 18px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-
-        .institution {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 5px;
-            font-style: italic;
-        }
-
-        .advisor, .thesis {
-            font-size: 14px;
-            color: #444;
-            margin-bottom: 5px;
+        .education-content h2 {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            color: #007bff;
         }
 
-        .gpa {
-            color: #007bff;
-            font-weight: 600;
+        /* Start of new experience section styles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        .timeline {
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            opacity: 0.2;
         }
 
         .experience-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #3498db;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .experience-card:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: -36px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #3498db;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+            z-index: 1;
+        }
+
+        .experience-header {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .logo-container {
+            width: 60px;
+            height: 60px;
             background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease-in-out;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            flex-shrink: 0;
         }
-        .section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            animation: fadeIn 1s ease-in-out;
+
+        .exp-logo {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
         }
+
+        .title-container {
+            flex-grow: 1;
+        }
+
+        .position {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .organization {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .location-date {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        .location i, .date i {
+            margin-right: 5px;
+        }
+
+        .achievements {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .achievements li {
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .achievements li:last-child {
+            margin-bottom: 0;
+        }
+
+        .achievements li::before {
+            content: '✓';
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .achievements strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        @media (min-width: 768px) {
+            .timeline:before {
+                left: 50%;
+                margin-left: -1.5px;
+            }
+            
+            .experience-card {
+                width: 45%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .experience-card:nth-child(odd) {
+                margin-right: 55%;
+            }
+            
+            .experience-card:nth-child(even) {
+                margin-left: 55%;
+            }
+            
+            .experience-card:before {
+                left: auto;
+                right: -36px;
+            }
+            
+            .experience-card:nth-child(odd):before {
+                left: -36px;
+                right: auto;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .timeline:before {
+                left: 18px;
+            }
+            
+            .experience-card {
+                width: calc(100% - 60px);
+                margin-left: 60px;
+            }
+            
+            .experience-card:before {
+                left: -36px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            .location-date {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        /* End of new experience section styles */
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -170,13 +318,6 @@
             width: 100%;
             border-radius: 10px;
         }
-
-        .exp-logo {
-            width: 30px; /* Adjust size as needed */
-            height: 30px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
         
         .footer {
             background-color: #343a40;
@@ -186,6 +327,70 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Publications Section Styles */
+        #publications {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .publication-section {
+            margin-bottom: 30px;
+        }
+        
+        .publication-section h3 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .publication-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 3px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        
+        .publication-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .publication-item p {
+            margin-bottom: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .publication-item .authors {
+            font-style: italic;
+            color: #777;
+            margin-top: 8px;
+        }
+        
+        .view-all {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .view-all a {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #3498db;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        
+        .view-all a:hover {
+            background: #2980b9;
         }
     </style>
 </head>
@@ -223,30 +428,36 @@
         <div class="container about-education">
             <div class="about-content">
                 <img src="profile.jpg" alt="Mafizur Rahman">
-                <h2><i class="fas fa-user-graduate"></i> About Me</h2>
-                <p>I am a PhD candidate in Electrical Engineering at Prairie View A&M University (PVAMU), specializing in machine learning and analog computing. My research focuses on developing Generalized Additive Models (GAMs) for deep neural network interpretability and optimizing neural networks for neuromorphic hardware implementation. I work under the supervision of Prof. Dr. Lijun Qian at the CREDIT Center, where I contribute to cutting-edge research at the intersection of AI and hardware acceleration.</p>
+                <h2><i class="fas fa-user"></i> About Me</h2>
+                <p>I am a dedicated PhD student in Electrical Engineering at Prairie View A&M University (PVAMU), focusing on the intersection of machine learning and analog computing. My research interests include neural network interpretability through Generalized Additive Models (GAMs) and optimizing deep learning models for neuromorphic hardware implementation.</p>
+                <p>Currently working at the CREDIT Center under the guidance of Prof. Dr. Lijun Qian, I am developing innovative methods to bridge the gap between high-performance digital neural networks and their efficient analog implementations. My work aims to advance both the theoretical understanding and practical applications of machine learning in resource-constrained environments.</p>
             </div>
             <div class="education-content">
                 <h2><i class="fas fa-university"></i> Education</h2>
                 
-                <div class="education-item">
-                    <p class="degree"><strong>Ph.D. in Electrical Engineering</strong></p>
-                    <p class="institution">Prairie View A&M University, Texas, USA</p>
-                    <p class="date">Expected: December 2028</p>
-                    <p class="advisor"><i class="fas fa-chalkboard-teacher"></i> Advisor: Prof. Dr. Lijun Qian</p>
+                <div class="degree">
+                    <p><strong>Prairie View A&M University, Texas, USA</strong></p>
+                    <p><i class="fas fa-graduation-cap"></i> Ph.D. in Electrical Engineering (Expected Dec 2028)</p>
+                    <p><em>Advisor:</em> Prof. Dr. Lijun Qian</p>
+                    <p><em>Research Focus:</em> Machine Learning, Analog Computing, Neural Network Interpretability</p>
                 </div>
                 
-                <div class="education-item">
-                    <p class="degree"><strong>M.Sc. in Computer Science</strong> | <span class="gpa">CGPA: 4.0/4.0</span></p>
-                    <p class="institution">Prairie View A&M University, Texas, USA</p>
-                    <p class="date">August 2023 – December 2024</p>
-                    <p class="thesis"><i class="fas fa-file-alt"></i> <em>Thesis:</em> Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
+                <div class="degree mt-4">
+                    <p><strong>Prairie View A&M University, Texas, USA</strong></p>
+                    <p><i class="fas fa-graduation-cap"></i> M.Sc in Computer Science (Aug 2023 – Dec 2024)</p>
+                    <p><strong>CGPA: 4.0/4.0</strong></p>
+                    <p><em>Thesis:</em> Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
+                </div>
+                
+                <div class="degree mt-4">
+                    <p><strong>East West University, Dhaka, Bangladesh</strong></p>
+                    <p><i class="fas fa-graduation-cap"></i> B.Sc in Computer Science & Engineering</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="section">
+<section id="features" class="section">
         <div class="container">
             <h2 class="text-center">Featured</h2>
             <div class="features">
@@ -267,59 +478,134 @@ analog accelerators for deep neural networks (DNNs).</p>
                     <p>Innovative approaches bridging AI and brain-inspired computation for future technologies.</p>
                 </div>
             </div>
-        </div>
     </section>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+<!-- Publications Section -->
+<section id="publications" class="section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-book"></i> Research Publications</h2>
+        
+        <div class="publication-section">
+            <h3>Journal Publications</h3>
             
-            <div class="experience-card">
-                <h4>
-                    <img src="pvamu.jpg" alt="CREDIT Center Logo" class="exp-logo">
-                    <strong>Graduate Research Assistant</strong> | 
-                    <em style="font-size: 0.7em;">
-                        CREDIT Center, Prairie View A & M University, Texas, USA
-                    </em> 
-                    <span class="float-end" style="font-size: 0.5em;">Sep 2023 – Present</span>
-                </h4>
-                <ul>
-                    <li>Collaborated with Sandia National Labs to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, reaching 98% of digital performance.</li>
-                    <li>Converted pretrained digital DNNs to analog DNNs in the presence of hardware nonlinearities for image classification, maintaining 98-99% accuracy on benchmark datasets.</li>
-                </ul>
+            <div class="publication-item">
+                <p><strong>Comparative Analysis of Inference Performance of Pre-trained Convolutional Neural Networks in Analog Accelerators</strong></p>
+                <p>IEEE Transactions on Emerging Topics in Computational Intelligence, 2024</p>
+                <p class="authors">M. Rahman, L. Qian. (In Review)</p>
             </div>
-
-            <div class="experience-card">
-                <h4>
-                    <img src="BU.png" alt="Baylor University Logo" class="exp-logo">
-                    <strong>Graduate Research Assistant</strong> | 
-                    <em style="font-size: 0.7em;">
-                        Baylor University, Texas, USA
-                    </em> 
-                    <span class="float-end" style="font-size: 0.5em;">Jan 2022 – Dec 2022</span>
-                </h4>
-                <ul>
-                    <li>Explored Human ES and IMR90 Fibroblasts cells, unveiling 100% interaction frequency for chromosome 07.</li>
-                    <li>Identified min absolute value scaling as the optimal Hi-C dataset normalization.</li>
-                </ul>
-            </div>
-
-            <div class="experience-card">
-                <h4>
-                    <img src="ewu.png" alt="East West University Logo" class="exp-logo">
-                    <strong>Undergraduate Teaching Assistant</strong> | 
-                    <em style="font-size: 0.7em;">
-                        East West University, Dhaka, Bangladesh
-                    </em> 
-                    <span class="float-end" style="font-size: 0.5em;">Sep 2018 – Apr 2020</span>
-                </h4>
-                <ul>
-                    <li>Assisted students during lab classes and developed lab manuals for courses such as Structured Programming, Numerical Methods, and Discrete Mathematics.</li>
-                    <li>Guided students in understanding complex programming concepts, improving their practical knowledge.</li>
-                </ul>
+            
+            <div class="publication-item">
+                <p><strong>Evaluating Pretrained Deep Learning Models for Image Classification Against Individual and Ensemble Adversarial Attacks</strong></p>
+                <p>IEEE ACCESS, 2024</p>
+                <p class="authors">M. Rahman, P. Roy, S. Frizell, L. Qian.</p>
             </div>
         </div>
-    </section>
+        
+        <div class="publication-section">
+            <h3>Conference Publications</h3>
+            
+            <div class="publication-item">
+                <p><strong>Comparative Analysis of Inference Performance of Pre-trained Deep Neural Networks in Analog Accelerators</strong></p>
+                <p>23rd IEEE International Conference on Machine Learning and Applications (ICMLA-24), Accepted and Presented, 2024</p>
+                <p class="authors">M. Rahman, M. Huang, L. Li, and L. Qian.</p>
+            </div>
+            
+            <div class="publication-item">
+                <p><strong>Advanced Retinal Image Segmentation using U-Net Architecture: A Leap Forward in Ophthalmological Diagnostics</strong></p>
+                <p>Proceedings of 4th International Conference on Advances in Electrical, Computing, Communication and Sustainable Technologies (ICAECT), 2024</p>
+                <p class="authors">N. Hasan, M.J.A. Riad, S. Das, P. Roy, M.R. Shuvo, M. Rahman.</p>
+            </div>
+            
+            <div class="publication-item">
+                <p><strong>Exploring Chromatin Interaction Between Two Human Cell Types and Different Normalization Techniques for HI-C Data</strong></p>
+                <p>Proceedings of 27th International Computer Science and Engineering Conference (ICSEC 23), 2023</p>
+                <p class="authors">M. Rahman, M.S.H. Chy, A. Rahman, S. Ahmed, T. Sharmin, M.S. Rahaman.</p>
+            </div>
+        </div>
+        
+        <div class="view-all">
+            <a href="#" class="btn">View All Publications</a>
+        </div>
+    </div>
+</section>
+
+<!-- New Experience Section -->
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
+        
+        <div class="timeline">
+            <!-- CREDIT Center Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="pvamu.jpg" alt="CREDIT Center Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Graduate Research Assistant</h3>
+                        <h4 class="organization">CREDIT Center, Prairie View A&M University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> September 2023 – Present</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Collaborated with <strong>Sandia National Labs</strong> to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, achieving <strong>98%</strong> of digital performance benchmarks.</li>
+                        <li>Successfully implemented conversion of pretrained digital DNNs to analog DNNs while managing hardware nonlinearities for image classification, maintaining <strong>98-99% accuracy</strong> on benchmark datasets.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Baylor University Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="BU.png" alt="Baylor University Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Graduate Research Assistant</h3>
+                        <h4 class="organization">Baylor University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> January 2022 – December 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Conducted comprehensive research on Human ES and IMR90 Fibroblasts cells, discovering <strong>100%</strong> interaction frequency for chromosome 07.</li>
+                        <li>Performed comparative analysis of normalization techniques for Hi-C datasets, identifying <strong>minimum absolute value scaling</strong> as the optimal methodology.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- East West University Experience -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="logo-container">
+                        <img src="ewu.png" alt="East West University Logo" class="exp-logo">
+                    </div>
+                    <div class="title-container">
+                        <h3 class="position">Undergraduate Teaching Assistant</h3>
+                        <h4 class="organization">East West University</h4>
+                        <div class="location-date">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                            <span class="date"><i class="far fa-calendar-alt"></i> September 2018 – April 2020</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-body">
+                    <ul class="achievements">
+                        <li>Developed comprehensive lab manuals and instructional materials for courses including <strong>Structured Programming</strong>, <strong>Numerical Methods</strong>, and <strong>Discrete Mathematics</strong>.</li>
+                        <li>Provided personalized guidance to students during laboratory sessions, significantly enhancing their practical understanding of complex programming concepts.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                 
     <footer class="footer">
         <p>&copy; 2025 Mafizur Rahman. All Rights Reserved.</p>
