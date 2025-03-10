@@ -61,6 +61,27 @@
             gap: 10px;
             color: #007bff;
         }
+
+        .experience-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+
+
+
+
+
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -171,16 +192,34 @@ analog accelerators for deep neural networks (DNNs).</p>
     </section>
 
 
-
-
-        <section id="experience" class="section">
+<section id="experience" class="section">
         <div class="container">
             <h2><i class="fas fa-briefcase"></i> Experience</h2>
-            <p><strong>Graduate Research Assistant | CREDIT Center, PVAMU</strong> (Sep 2023 – Present)</p>
-            <p>Collaborated with Sandia National Labs to convert PyTorch-based DNN to analog, achieving 98% of digital performance.</p>
+            <div class="experience-card">
+                <h4><strong>Graduate Research Assistant</strong> | <em>CREDIT Center, Prairie View A & M University, Texas, USA</em> <span class="float-end">Sep 2023 – Present</span></h4>
+                <ul>
+                    <li>Collaborated with Sandia National Labs to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, reaching 98% of digital performance.</li>
+                    <li>Converted pretrained digital DNNs to analog DNNs in the presence of hardware nonlinearities for image classification, maintaining 98-99% accuracy on benchmark datasets.</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h4><strong>Graduate Research Assistant</strong> | <em>Baylor University, Texas, USA</em> <span class="float-end">Jan 2022 – Dec 2022</span></h4>
+                <ul>
+                    <li>Explored Human ES and IMR90 Fibroblasts cells, unveiling 100% interaction frequency for chromosome 07.</li>
+                    <li>Identified min absolute value scaling as the optimal Hi-C dataset normalization.</li>
+                </ul>
+            </div>
+            <div class="experience-card">
+                <h4><strong>Undergraduate Teaching Assistant</strong> | <em>East West University, Dhaka, Bangladesh</em> <span class="float-end">Sep 2018 – Apr 2020</span></h4>
+                <ul>
+                    <li>Assisted students during lab classes and developed lab manuals for courses such as Structured Programming, Numerical Methods, and Discrete Mathematics.</li>
+                    <li>Guided students in understanding complex programming concepts, improving their practical knowledge.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
+                
     <footer class="footer">
         <p>&copy; 2025 Mafizur Rahman. All Rights Reserved.</p>
     </footer>
