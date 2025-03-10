@@ -22,7 +22,7 @@
             padding: 40px 0;
             background: url('back.jpg') center/cover no-repeat;
             color: white;
-            min-height: 300px;
+            min-height: 280px;
         }
         .profile-img {
             width: 150px;
@@ -49,6 +49,28 @@
         .card:hover {
             transform: scale(1.05);
         }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: scale(1.1);
+        }
+        .feature-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -65,7 +87,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Mafizur</a>
+            <a class="navbar-brand" href="#">Mafizur Rahman</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -87,9 +109,33 @@
         <div class="container">
             <img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
             <h2>About Me</h2>
-            <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) for various applications, including image classification, predictive analysis and natural language processing. Besides, I am passionate about developing efficient AI models optimized for neuromorphic hardware. My career goal is to become a Research Scientist, where I can contribute to advancing AI and computational intelligence through innovative research and practical implementations.</p>
+            <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) for various applications, including image classification, predictive analysis and natural language processing. Besides, I am passionate about developing efficient AI models optimized for neuromorphic hardware. My career goal is to become a Research Scientist, where I can contribute to advancing AI and computational intelligence through innovative research and practical implementations.
 
-            <a class="btn btn-primary" href="#publications">View Publications</a>
+</p>
+                <a class="btn btn-primary" href="#publications">View Publications</a>
+        </div>
+    </section>
+    
+    <section id="features" class="section text-center bg-light">
+        <div class="container">
+            <h2>Featured Topics</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="feature1.jpg" alt="Feature 1">
+                    <h3>Deep Learning Applications</h3>
+                    <p>Exploring the power of deep learning in real-world applications, from image recognition to autonomous systems.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="feature2.jpg" alt="Feature 2">
+                    <h3>AI Model Optimization</h3>
+                    <p>Enhancing AI efficiency with model compression, pruning, and quantization techniques.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="feature3.jpg" alt="Feature 3">
+                    <h3>Neurocomputing Advances</h3>
+                    <p>Innovative approaches to neuro-inspired computing, bridging AI and brain-like computation.</p>
+                </div>
+            </div>
         </div>
     </section>
     
