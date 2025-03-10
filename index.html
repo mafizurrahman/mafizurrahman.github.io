@@ -18,16 +18,32 @@
             color: white !important;
         }
         .header-content {
-            text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(to right, #0056b3, #007bff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+            background: url('back.jpg') center/cover no-repeat;
             color: white;
+            min-height: 300px;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
         }
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-bottom: 15px;
+            margin-right: 20px;
+        }
+        .about-text {
+            color: white;
+            text-align: left;
         }
         .social-links a {
             margin: 0 10px;
@@ -39,7 +55,7 @@
             border: none;
         }
         .section {
-            padding: 60px 0;
+            padding: 40px 0;
         }
         .card {
             transition: transform 0.3s;
@@ -51,14 +67,18 @@
 </head>
 <body>
     <header class="header-content">
-<img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
-        <h1>Mafizur Rahman</h1>
-        <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
-        <div class="social-links">
-            <a href="#"><i class="fas fa-graduation-cap"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
+            <div class="about-text">
+                <h1>Mafizur Rahman</h1>
+                <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
+                <div class="social-links">
+                    <a href="#"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </header>
     
