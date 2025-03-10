@@ -4,499 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mafizur Rahman - PhD Researcher</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar .nav-link {
+            color: white !important;
+        }
+        .header-content {
+            text-align: center;
+            padding: 50px 0;
+            background: #007bff;
+            color: white;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #0056b3;
+            border: none;
+        }
+        .section {
+            padding: 60px 0;
+        }
+        .card {
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Mafizur Rahman</h1>
-                <p class="subtitle">PhD in Electrical Engineering | Machine Learning Researcher</p>
-                <div class="social-links">
-                    <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:rmafizur10@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+12543407697" title="Phone"><i class="fas fa-phone"></i></a>
-                </div>
-                <p class="address">702 Santee St., Prairie View, TX-77445, USA</p>
-            </div>
+    <header class="header-content">
+        <h1>Mafizur Rahman</h1>
+        <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
+        <div class="social-links">
+            <a href="#"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
-
-    <nav class="navbar">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-btn">About</a></li>
-                <li><a href="#education" class="nav-btn">Education</a></li>
-                <li><a href="#experience" class="nav-btn">Experience</a></li>
-                <li><a href="#publications" class="nav-btn">Publications</a></li>
-                <li><a href="#projects" class="nav-btn">Projects</a></li>
-                <li><a href="#skills" class="nav-btn">Skills</a></li>
-                <li><a href="cv.pdf" class="nav-btn highlight" target="_blank">Download CV</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">Mafizur Rahman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="cv.pdf" target="_blank">Download CV</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-
-    <section id="about" class="section">
+    
+    <section id="about" class="section text-center">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="/api/placeholder/300/300" alt="Mafizur Rahman" />
-                </div>
-                <div class="about-text">
-                    <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing.</p>
-                    <p>My current work involves converting pretrained deep neural networks to analog for image classification while maintaining high accuracy on benchmark datasets. I've collaborated with Sandia Labs to convert PyTorch-based DNNs for multi-frame super-resolution to analog DNNs.</p>
-                    <p>Previously, I completed my M.Sc in Computer Science at Prairie View A&M University with a perfect 4.0 GPA, where my thesis focused on the "Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators."</p>
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing.</p>
+            <a class="btn btn-primary" href="#publications">View Publications</a>
         </div>
     </section>
-
-    <section id="education" class="section">
+    
+    <section id="projects" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Jan 2025 - Present</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Ph.D. in Electrical Engineering</h3>
-                        <p class="institution">Prairie View A&M University, Texas, USA</p>
-                        <p>Advisor: Prof. Dr. Lijun Qian</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Aug 2023 - Dec 2024</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>M.Sc in Computer Science</h3>
-                        <p class="institution">Prairie View A&M University, Texas, USA</p>
-                        <p><strong>CGPA: 4.0/4.0</strong></p>
-                        <p>Thesis: Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
+            <h2 class="text-center">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ensemble Adversarial Attack</h5>
+                            <p class="card-text">Developed adversarial attack methods for pre-trained DNN models.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Jan 2016 - Apr 2020</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>B.Sc in Computer Science and Engineering</h3>
-                        <p class="institution">East West University, Dhaka, Bangladesh</p>
-                        <p><strong>CGPA: 3.71/4.0</strong></p>
-                        <p>Thesis: A Dynamic Strategy for Classifying Sentiment from Bengali Text by Utilizing Word2vec Model</p>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Farmers Market</h5>
+                            <p class="card-text">A marketplace for farmers and buyers to connect securely.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Sep 2023 - Present</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Graduate Research Assistant</h3>
-                        <p class="institution">CREDIT Center, Prairie View A&M University, Texas, USA</p>
-                        <ul>
-                            <li>Collaborated with Sandia Labs to convert a PyTorch based DNN for multi-frame super-resolution to analog DNN, reaching 98% of digital performance.</li>
-                            <li>Converted pretrained DNNs to analog for image classification, maintaining 98-99% accuracy on benchmark datasets.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Jan 2022 - Dec 2022</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Graduate Research Assistant</h3>
-                        <p class="institution">Baylor University, Texas, USA</p>
-                        <ul>
-                            <li>Explored Human ES and IMR90 Fibroblasts cells, unveiling 100% interaction frequency for chromosome 07.</li>
-                            <li>Identified min absolute value scaling as the optimal Hi-C dataset normalization.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">
-                        <span>Sep 2018 - Apr 2020</span>
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Undergraduate Teaching Assistant</h3>
-                        <p class="institution">East West University, Dhaka, Bangladesh</p>
-                        <ul>
-                            <li>Assisted students during their lab classes and developed lab manuals for courses such as Structured Programming, Numerical Methods, and Discrete Mathematics.</li>
-                            <li>Guided students in understanding complex programming concepts, improving their practical knowledge.</li>
-                        </ul>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sentiment Analysis</h5>
+                            <p class="card-text">Classified Bengali text sentiments using deep learning models.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="research-fields" class="section">
-        <div class="container">
-            <h2 class="section-title">Research Fields</h2>
-            <div class="research-fields">
-                <div class="research-field">Machine Learning</div>
-                <div class="research-field">Analog Computing</div>
-                <div class="research-field">Deep Learning</div>
-                <div class="research-field">Neurocomputing</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="pub-buttons">
-                <button class="pub-btn active" data-type="all">All</button>
-                <button class="pub-btn" data-type="journal">Journal</button>
-                <button class="pub-btn" data-type="conference">Conference</button>
-            </div>
-            
-            <div class="publications-list">
-                <h3 class="pub-category">Journal Papers</h3>
-                <div class="publication journal">
-                    <h4>Comparative Analysis of Inference Performance of Pre-trained Convolutional Neural Networks in Analog Accelerators</h4>
-                    <p class="pub-authors">M. Rahman, L. Qian</p>
-                    <p class="pub-venue">IEEE Transactions on Emerging Topics in Computational Intelligence, 2024 (In Review)</p>
-                </div>
-                
-                <div class="publication journal">
-                    <h4>Evaluating Pretrained Deep Learning Models for Image Classification Against Individual and Ensemble Adversarial Attacks</h4>
-                    <p class="pub-authors">M. Rahman, P. Roy, S. Frizell, L. Qian</p>
-                    <p class="pub-venue">IEEE ACCESS, 2024 (Accepted)</p>
-                </div>
-                
-                <div class="publication journal">
-                    <h4>A Dynamic Strategy for Classifying Sentiment from Bengali Text by Utilizing Word2vector Model</h4>
-                    <p class="pub-authors">M. Rahman, M.R.A. Talukder, L.A. Setu, A.K. Das</p>
-                    <p class="pub-venue">Journal of Information Technology Research (JITR), 2022</p>
-                </div>
-                
-                <div class="publication journal">
-                    <h4>A Predictive Analysis of Chronic Kidney Disease by Exploring Important Features</h4>
-                    <p class="pub-authors">M. Rahman, L. Islam, M. Rana, M.Z. Tazim, J.F. Sorna, S.T. Alvi</p>
-                    <p class="pub-venue">International Journal of Computing and Digital Systems (IJCDS), 2022</p>
-                </div>
-                
-                <div class="publication journal">
-                    <h4>A Contact Tracing Model for COVID-19 using Mobile Crowdsourcing</h4>
-                    <p class="pub-authors">L. Islam, M. Rahman, N. Ahmad, T. Sharmin, J.F. Sorna</p>
-                    <p class="pub-venue">International Journal on Advanced Science, Engineering and Information Technology (IJASEIT), 2021</p>
-                </div>
-                
-                <div class="publication journal">
-                    <h4>A BlockChain Based Crowdsourced Task Assessment Framework using Smart Contract</h4>
-                    <p class="pub-authors">L. Islam, S.T. Alvi, M. Rahman, A.A. Prova, M.N. Hossain, J.F. Sorna, M.N. Uddin</p>
-                    <p class="pub-venue">International Journal of Advanced Computer Science and Applications (IJACSA), 2021</p>
-                </div>
-                
-                <h3 class="pub-category">Conference Papers</h3>
-                <div class="publication conference">
-                    <h4>Comparative Analysis of Inference Performance of Pre-trained Deep Neural Networks in Analog Accelerators</h4>
-                    <p class="pub-authors">M. Rahman, M. Huang, L. Li, and L. Qian</p>
-                    <p class="pub-venue">23rd IEEE International Conference on Machine Learning and Applications (ICMLA-24), 2024</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Advanced Retinal Image Segmentation using U-Net Architecture: A Leap Forward in Ophthalmological Diagnostics</h4>
-                    <p class="pub-authors">N. Hasan, M.J.A. Riad, S. Das, P. Roy, M.R. Shuvo, M. Rahman</p>
-                    <p class="pub-venue">Proceedings of 4th International Conference on Advances in Electrical, Computing, Communication and Sustainable Technologies (ICAECT), 2024</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Exploring Chromatin Interaction Between Two Human Cell Types and Different Normalization Techniques for HI-C Data</h4>
-                    <p class="pub-authors">M. Rahman, M.S.H. Chy, A. Rahman, S. Ahmed, T. Sharmin, M.S. Rahaman</p>
-                    <p class="pub-venue">Proceedings of 27th International Computer Science and Engineering Conference (ICSEC 23), 2023</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Bless: An Interactive Application to Show Gratitude towards Doctors</h4>
-                    <p class="pub-authors">M. Rahman, M.S. Rahaman, M.S.H. Chy</p>
-                    <p class="pub-venue">Proceedings of 11th International Conference on Serious Games and Applications for Health (SeGAH 2023), 2023</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>A Systematic Review on Software Design Patterns in Today's Perspective</h4>
-                    <p class="pub-authors">M. Rahman, M.S.H. Chy, S. Saha</p>
-                    <p class="pub-venue">Proceedings of 11th International Conference on Serious Games and Applications for Health (SeGAH 2023), 2023</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Political Ideology Prediction from Bengali Text Using Word Embedding Models</h4>
-                    <p class="pub-authors">Z. Tasnim, S. Ahmed, A. Rahman, J.F. Sorna, M. Rahman</p>
-                    <p class="pub-venue">Proceedings of 3rd IEEE Conference on Emerging Smart Computing Informatics (ESCI 2021), 2021</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>State of the Art of Telemedicine and E-health Services in Bangladesh</h4>
-                    <p class="pub-authors">M. Rahman, S. Das, M.Z. Tazim, M. Rana, R.A. Tuhin, A.K. Das</p>
-                    <p class="pub-venue">Proceedings of 6th International Conference on Inventive Computation Technologies (ICICT), 2021</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Diabetes Recognition in Pregnant Women by Extracting Features Using PCA and Data Mining Algorithms</h4>
-                    <p class="pub-authors">M. Rahman, L. Islam</p>
-                    <p class="pub-venue">Proceedings of 2nd IEEE Int. Conference on Innovating Technology for Humanity (IEEE Punecon), 2020</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>State of the art of Mobile Banking Services and Future Prospects in Developing Countries</h4>
-                    <p class="pub-authors">M. Rahman, M.Z. Tazim, S. Das, L. Islam</p>
-                    <p class="pub-venue">Proceedings of 9th International Conference on Communication Systems and Network Technologies (CSNT), 2020</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Effective Prediction On Heart Disease: Anticipating Heart Disease Using Data Mining Techniques</h4>
-                    <p class="pub-authors">M. Rahman, M.M. Zahin, L. Islam</p>
-                    <p class="pub-venue">Proceedings of 2nd Int. Conference on Smart Systems and Inventive Technology, 2019</p>
-                </div>
-                
-                <div class="publication conference">
-                    <h4>Obstacles of Mobile Crowdsourcing: A Survey</h4>
-                    <p class="pub-authors">L. Islam, S.T. Alvi, M.N. Uddin, M. Rahman</p>
-                    <p class="pub-venue">Proceedings of 2nd IEEE Int. Conf. on Innovating Technology for Humanity (IEEE Punecon), 2019</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="reviewer" class="section">
-        <div class="container">
-            <h2 class="section-title">Reviewer Experience</h2>
-            <div class="reviewer-item">
-                <h3>International Journal of Computing and Digital Systems</h3>
-                <p>CiteScore = 1.7, SJR = 0.23</p>
-                <p>Jun 2021 - Sep 2021</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="spotlight" class="section">
-        <div class="container">
-            <h2 class="section-title">Research Spotlight</h2>
-            <div class="spotlight-item">
-                <h3>Student Spotlight - Research</h3>
-                <p>Dec 2024</p>
-                <p>My research work has been featured in Prairie View A&M University's Student Spotlight for my research on analog accelerators for deep neural networks (DNNs).</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/250" alt="Ensemble Adversarial Attack" />
-                    </div>
-                    <div class="project-content">
-                        <h3>Ensemble Adversarial Attack</h3>
-                        <p class="project-date">Jan 2024 – May 2024</p>
-                        <p class="project-tech">Python, Pytorch, Pandas, Matplotlib</p>
-                        <ul>
-                            <li>Developed new ensemble adversarial attacks integrating three single attacks for pre-trained DNN model evaluation.</li>
-                            <li>Our proposed ensemble adversarial attacks reduce DNN performance by over 59%, even with applied defenses.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/250" alt="Farmers Market Platform" />
-                    </div>
-                    <div class="project-content">
-                        <h3>Farmers Market</h3>
-                        <p class="project-date">Jan 2024 – May 2024</p>
-                        <p class="project-tech">PHP, MySQL, Javascript, jQuery, HTML, CSS, Bootstrap</p>
-                        <ul>
-                            <li>Developed the Farmers Market platform, integrating secure farmer and buyer registration, product categorization, and encrypted credential management.</li>
-                            <li>Designed and implemented core functionalities including bid tracking, order processing, shopping cart systems, and visitor interaction logging to optimize user experience and operational efficiency.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/250" alt="Bless Prototype" />
-                    </div>
-                    <div class="project-content">
-                        <h3>Bless: An Interactive Prototype</h3>
-                        <p class="project-date">Jan 2022 – May 2022</p>
-                        <p class="project-tech">Flutter</p>
-                        <ul>
-                            <li>Developed an interactive prototype enabling doctors to receive gratitude from patients via text messages.</li>
-                            <li>Our system outperformed verbal expressions of gratitude, with a 12.5% increase in positive feeling scores.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/400/250" alt="Sentiment Analysis" />
-                    </div>
-                    <div class="project-content">
-                        <h3>Sentiment Analysis</h3>
-                        <p class="project-date">Sep 2019 – Apr 2020</p>
-                        <p class="project-tech">Python, TensorFlow, Keras, Pandas, Matplotlib</p>
-                        <ul>
-                            <li>Classified five sentiments in lengthy Bengali text using deep learning models, surpassing the accuracy of prior works by more than 3%.</li>
-                            <li>Compared CBOW and Skip-gram models, focusing on hyperparameter tuning for sentiment prediction.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">C++</span>
-                        <span class="skill-badge">HTML</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">Javascript</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">MySQL</span>
-                        <span class="skill-badge">MongoDB</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Libraries</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">TensorFlow</span>
-                        <span class="skill-badge">PyTorch</span>
-                        <span class="skill-badge">SciKit Learn</span>
-                        <span class="skill-badge">Pandas</span>
-                        <span class="skill-badge">NumPy</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Others</h3>
-                    <div class="skills-list">
-                        <span class="skill-badge">CUDA</span>
-                        <span class="skill-badge">Crossbar Simulator</span>
-                        <span class="skill-badge">Circuit Design</span>
-                        <span class="skill-badge">Memristor</span>
-                        <span class="skill-badge">Model Optimization</span>
-                        <span class="skill-badge">Problem Solving</span>
-                        <span class="skill-badge">Communication</span>
-                        <span class="skill-badge">Teamwork</span>
-                        <span class="skill-badge">Leadership</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>© 2025 Mafizur Rahman</p>
-                    <p>rmafizur10@gmail.com | +1 (254) 340-7697</p>
-                </div>
-                <div class="social-links">
-                    <a href="#" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:rmafizur10@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
+    <footer class="text-center p-4 bg-dark text-white">
+        <p>© 2025 Mafizur Rahman | Contact: rmafizur10@gmail.com</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Publication filter buttons
-        document.querySelectorAll('.pub-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                document.querySelectorAll('.pub-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                const type = this.getAttribute('data-type');
-                const publications = document.querySelectorAll('.publication');
-                const categories = document.querySelectorAll('.pub-category');
-                
-                if (type === 'all') {
-                    publications.forEach(pub => {
-                        pub.style.display = 'block';
-                    });
-                    categories.forEach(cat => {
-                        cat.style.display = 'block';
-                    });
-                } else {
-                    publications.forEach(pub => {
-                        if (pub.classList.contains(type)) {
-                            pub.style.display = 'block';
-                        } else {
-                            pub.style.display = 'none';
-                        }
-                    });
-                    
-                    categories.forEach(cat => {
-                        if (cat.textContent.toLowerCase().includes(type)) {
-                            cat.style.display = 'block';
-                        } else {
-                            cat.style.display = 'none';
-                        }
-                    });
-                }
-            });
-        });
-        
-        // Sticky navigation
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-    </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
