@@ -22,54 +22,32 @@
             padding: 40px 0;
             background: url('back.jpg') center/cover no-repeat;
             color: white;
-            min-height: 280px;
+            min-height: 200px;
         }
-        .profile-img {
+        .about-education {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            gap: 30px;
+            padding: 40px 0;
+        }
+        .about-content, .education-content {
+            width: 50%;
+        }
+        .about-content img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             display: block;
-            margin: 0 auto 20px;
+            margin-bottom: 20px;
         }
-        .social-links a {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.5rem;
+        .education-content {
+            animation: fadeIn 1s ease-in-out;
         }
-        .btn-primary {
-            background-color: #0056b3;
-            border: none;
-        }
-        .section {
-            padding: 40px 0;
-        }
-        .card {
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px 0;
-        }
-        .feature-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 30%;
-            transition: transform 0.3s ease-in-out;
-        }
-        .feature-card:hover {
-            transform: scale(1.1);
-        }
-        .feature-card img {
-            width: 100%;
-            border-radius: 10px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -105,14 +83,22 @@
         </div>
     </nav>
     
-    <section id="about" class="section text-center">
-        <div class="container">
-            <img src="profile.jpg" alt="Mafizur Rahman" class="profile-img">
-            <h2>About Me</h2>
-            <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) for various applications, including image classification, predictive analysis and natural language processing. Besides, I am passionate about developing efficient AI models optimized for neuromorphic hardware. My career goal is to become a Research Scientist, where I can contribute to advancing AI and computational intelligence through innovative research and practical implementations.
-
-</p>
-                <a class="btn btn-primary" href="#publications">View Publications</a>
+    <section id="about-education" class="section">
+        <div class="container about-education">
+            <div class="about-content">
+                <img src="profile.jpg" alt="Mafizur Rahman">
+                <h2>About Me</h2>
+                <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) for various applications. Besides, I am passionate about developing efficient AI models optimized for neuromorphic hardware. My career goal is to become a Research Scientist, where I can contribute to advancing AI and computational intelligence through innovative research and practical implementations.</p>
+            </div>
+            <div class="education-content">
+                <h2>Education</h2>
+                <p><strong>Prairie View A&M University, Texas, USA</strong> (Expected Dec 2028)</p>
+                <p>Ph.D. in Electrical Engineering</p>
+                <p>Advisor: Prof. Dr. Lijun Qian</p>
+                <p><strong>Prairie View A&M University, Texas, USA</strong> (Aug 2023 – Dec 2024)</p>
+                <p>M.Sc in Computer Science | CGPA: 4.0/4.0</p>
+                <p>Thesis: Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
+            </div>
         </div>
     </section>
     
