@@ -20,9 +20,14 @@
         .header-content {
             text-align: center;
             padding: 40px 0;
-            background: url('back.jpg') center/cover no-repeat;
+            background: url('background.jpg') center/cover no-repeat;
             color: white;
-            min-height: 290px;
+            min-height: 200px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 2rem;
         }
         .about-education {
             display: flex;
@@ -32,9 +37,8 @@
             gap: 30px;
             padding: 40px 0;
         }
-        .about-content {
+        .about-content, .education-content {
             width: 50%;
-            text-align: justify;
             padding: 20px;
             border-radius: 10px;
             background: #f8f9fa;
@@ -47,12 +51,17 @@
             margin-bottom: 20px;
         }
         .education-content {
-            width: 50%;
-            padding: 20px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #007bff, #6610f2);
-            color: white;
+            background: #f8f9fa;
+            color: black;
             animation: fadeIn 1s ease-in-out;
+        }
+        .education-content h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .education-content h2 i {
+            color: #007bff;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -120,36 +129,13 @@
                 <p>I am a PhD student in Electrical Engineering at Prairie View A&M University, working under the guidance of Prof. Dr. Lijun Qian. My research focuses on Machine Learning, Analog Computing, Deep Learning, and Neurocomputing. I have extensive experience in developing and optimizing deep neural networks (DNNs) for various applications, including image classification, predictive analysis, and natural language processing. Besides, I am passionate about developing efficient AI models optimized for neuromorphic hardware. My career goal is to become a Research Scientist, where I can contribute to advancing AI and computational intelligence through innovative research and practical implementations.</p>
             </div>
             <div class="education-content">
-                <h2>Education</h2>
+                <h2><i class="fas fa-university"></i> Education</h2>
                 <p><strong>Prairie View A&M University, Texas, USA</strong> (Expected Dec 2028)</p>
                 <p>Ph.D. in Electrical Engineering</p>
                 <p>Advisor: Prof. Dr. Lijun Qian</p>
                 <p><strong>Prairie View A&M University, Texas, USA</strong> (Aug 2023 – Dec 2024)</p>
                 <p>M.Sc in Computer Science | <strong>CGPA: 4.0/4.0</strong></p>
                 <p><em>Thesis:</em> Comparative Analysis Of Inference Performance Of Pretrained Deep Learning Models In Analog Accelerators</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="features" class="section text-center bg-light">
-        <div class="container">
-            <h2>Featured Topics</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <img src="feature1.jpg" alt="Feature 1">
-                    <h3>Deep Learning Applications</h3>
-                    <p>Exploring the power of deep learning in real-world applications, from image recognition to autonomous systems.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="feature2.jpg" alt="Feature 2">
-                    <h3>AI Model Optimization</h3>
-                    <p>Enhancing AI efficiency with model compression, pruning, and quantization techniques.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="feature3.jpg" alt="Feature 3">
-                    <h3>Neurocomputing Advances</h3>
-                    <p>Innovative approaches to neuro-inspired computing, bridging AI and brain-like computation.</p>
-                </div>
             </div>
         </div>
     </section>
