@@ -1,1081 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mafizur Rahman - PhD Researcher</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar .nav-link {
-            color: white !important;
-        }
-        .header-content {
-            text-align: center;
-            padding: 40px 0;
-            background: url('back.jpg') center/cover no-repeat;
-            color: white;
-            min-height: 200px;
-        }
-        .social-links a {
-            margin: 0 17px;
-            color: white;
-            font-size: 1.2rem;
-        }
-      
-.about-education {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-    gap: 30px;
-    padding: 40px 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mafizur Rahman – PhD Researcher</title>
+<meta name="description" content="Ph.D. student in Electrical Engineering at Prairie View A&M University. Research on hardware-aware AI, analog in-memory computing, and multi-agent language models.">
+<style>
+:root{--bg:#fff;--bg2:#fff7ed;--text:#1f2937;--muted:#6b5b50;--line:#f8dcc4;--accent:#ea580c;--teal:#db2777;--amber:#f59e0b;--pink:#e11d48;--h1:#ffedd5;--h2:#fce7f3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .mark{font-family:Georgia,serif;font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:.04em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem}
+nav ul a{color:var(--muted)}nav ul a:hover{color:var(--text);text-decoration:none}
+.hero{padding:64px 0 48px;display:flex;gap:40px;align-items:center}
+.hero img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:1px solid var(--line);flex-shrink:0;background:var(--bg2)}
+h1{font-family:Georgia,serif;font-size:2.4rem;line-height:1.15;margin:0 0 6px;font-weight:700}
+.role{color:var(--muted);margin:0 0 18px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{border:1px solid var(--line);border-radius:6px;padding:6px 14px;font-size:.88rem;color:var(--text)}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.links a.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.links a.primary:hover{color:var(--bg);opacity:.9}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-family:Georgia,serif;font-size:1.5rem;margin:0 0 24px}
+h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:32px 0 12px}
+.about p{margin:0 0 14px}
+.item{display:grid;grid-template-columns:150px 1fr;gap:8px 24px;margin-bottom:24px}
+.when{color:var(--muted);font-size:.9rem}
+.item h4{margin:0;font-size:1rem}
+.item .org{color:var(--muted);font-size:.93rem}
+.item ul{margin:8px 0 0;padding-left:18px;font-size:.94rem}
+.item p{margin:6px 0 0;font-size:.94rem}
+.pub{margin:0 0 16px;padding-left:16px;border-left:2px solid var(--line)}
+.pub b{display:block;font-weight:600}
+.pub span{display:block;font-size:.9rem;color:var(--muted)}
+.pub em{font-style:normal;color:var(--text)}
+.tag{display:inline-block;font-size:.72rem;border:1px solid var(--line);border-radius:4px;padding:0 6px;margin-left:6px;color:var(--accent);vertical-align:middle}
+.skills{display:grid;grid-template-columns:150px 1fr;gap:10px 24px;font-size:.95rem}
+.skills dt{color:var(--muted)}.skills dd{margin:0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem}
+
+/* colorful theme */
+nav{border-bottom:3px solid transparent;border-image:linear-gradient(90deg,var(--accent),var(--teal),var(--amber),var(--pink)) 1}
+nav .mark{background:linear-gradient(90deg,var(--accent),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav ul a:hover{color:var(--accent)}
+.herobg{background:linear-gradient(135deg,#312e81 0%,#6d28d9 50%,#0e7490 100%);color:#fff;position:relative;overflow:hidden}
+.herobg:before{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-160px;border-radius:50%;background:radial-gradient(circle,rgba(236,72,153,.45),transparent 70%)}
+.herobg:after{content:"";position:absolute;width:380px;height:380px;left:-140px;bottom:-200px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.35),transparent 70%)}
+.hero{position:relative;z-index:1;padding:72px 24px 64px}
+.hero img{border:4px solid rgba(255,255,255,.85);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.role{color:rgba(255,255,255,.85)}
+.links a{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.35);color:#fff}
+.links a:hover{background:rgba(255,255,255,.25);border-color:#fff;color:#fff}
+.links a.primary{background:linear-gradient(90deg,var(--amber),var(--pink));border:0;color:#1e1b3a;font-weight:600}
+.links a.primary:hover{color:#1e1b3a}
+h2{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;position:relative;padding-bottom:8px}
+h2:after{content:"";position:absolute;left:0;bottom:0;width:48px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--amber),var(--pink))}
+h3{color:var(--teal)}
+section{border-top:0}
+.item{background:var(--bg2);border-radius:10px;padding:18px 20px;border-left:5px solid var(--accent)}
+.item:nth-of-type(3n+2){border-left-color:var(--teal)}
+.item:nth-of-type(3n){border-left-color:var(--pink)}
+.when{color:var(--accent);font-weight:600}
+.pub{background:var(--bg2);border-radius:8px;padding:12px 16px;border-left:4px solid var(--teal)}
+.pub:nth-of-type(even){border-left-color:var(--accent)}
+.tag{background:var(--amber);color:#1e1b3a;border:0;font-weight:600}
+.news{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.news li{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border-radius:10px;padding:12px 16px}
+.news em{font-style:normal;font-weight:600}
+.badge{flex-shrink:0;font-size:.75rem;font-weight:700;color:#fff;border-radius:999px;padding:2px 12px;margin-top:2px}
+.b1{background:var(--accent)}.b2{background:var(--teal)}.b3{background:#d97706}.b4{background:var(--pink)}
+footer{background:linear-gradient(90deg,#312e81,#6d28d9,#0e7490);color:#fff;border:0}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.herobg:before{animation:drift 14s ease-in-out infinite alternate}
+.herobg:after{animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.15)}}
+@media(prefers-reduced-motion:reduce){.herobg:before,.herobg:after{animation:none}}
+.avatar{position:relative;width:170px;height:170px;border-radius:50%;flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),var(--teal));color:#fff;font:700 3rem Georgia,serif;border:4px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.hero .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;border-radius:0;box-shadow:none}
+/* slightly bolder text */
+.role{font-weight:600}
+nav ul a{font-weight:600}
+/* light overrides */
+.herobg{background:linear-gradient(135deg,var(--h1),var(--h2));color:var(--text)}
+.herobg:before,.herobg:after{background:radial-gradient(circle,rgba(255,255,255,.8),transparent 70%)}
+.hero img{border:4px solid #fff;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.role{color:var(--muted);font-weight:600}
+.links a{background:#fff;border:1px solid var(--line);color:var(--accent)}
+.links a:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.links a.primary{background:linear-gradient(90deg,var(--accent),var(--teal));color:#fff;border:0}
+.links a.primary:hover{color:#fff;opacity:.92}
+.tag{color:#1f2937}
+footer{background:var(--bg2);color:var(--muted);border-top:3px solid var(--accent)}
+@media(max-width:700px){
+ nav .wrap{padding:0 16px}
+ nav ul{gap:16px;font-size:.85rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none;margin-left:12px}
+ nav ul::-webkit-scrollbar{display:none}
+ .wrap{padding-left:16px;padding-right:16px}
+ .hero{padding:40px 16px 36px;gap:24px}
+ .avatar{width:130px;height:130px;font-size:2.4rem}
+ .item{padding:14px 16px}
+ .news li{flex-direction:column;gap:6px}
+
+ .hero{flex-direction:column;text-align:center;padding-top:44px}
+ .links{justify-content:center}
+ .item,.skills{grid-template-columns:1fr}
+ h1{font-size:2rem}
 }
-
-.about-content, .education-content {
-    width: 48%;
-    padding: 20px;
-    border-radius: 10px;
-    background: #f8f9fa;
-    margin-left: 0; 
-    text-align: justify;
-}
-
-.about-content img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 20px auto;
-    
-}
-
-        .education-content {
-            background: #f8f9fa;
-            color: black;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .education-content h2 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #007bff;
-        }
-
-        /* Start of new experience section styles */
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: #333;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(to right, #3498db, #2c3e50);
-        }
-
-        .section-title i {
-            margin-right: 10px;
-            color: #3498db;
-        }
-
-        .timeline {
-            position: relative;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 18px;
-            height: 100%;
-            width: 3px;
-            background: linear-gradient(to bottom, #3498db, #2c3e50);
-            opacity: 0.2;
-        }
-
-        .experience-card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-            padding: 25px;
-            margin-bottom: 30px;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid #3498db;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        .experience-card:before {
-            content: '';
-            position: absolute;
-            top: 30px;
-            left: -36px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: #3498db;
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-            z-index: 1;
-        }
-
-        .experience-header {
-            display: flex;
-            margin-bottom: 20px;
-            align-items: center;
-        }
-
-        .logo-container {
-            width: 60px;
-            height: 60px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .exp-logo {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .title-container {
-            flex-grow: 1;
-        }
-
-        .position {
-            margin: 0 0 5px 0;
-            font-size: 1.2rem;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        .organization {
-            margin: 0 0 8px 0;
-            font-size: 1rem;
-            color: #3498db;
-            font-weight: 500;
-        }
-
-        .location-date {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.85rem;
-            color: #7f8c8d;
-        }
-
-        .location i, .date i {
-            margin-right: 5px;
-        }
-
-        .achievements {
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .achievements li {
-            margin-bottom: 12px;
-            position: relative;
-            line-height: 1.6;
-            color: #555;
-        }
-
-        .achievements li:last-child {
-            margin-bottom: 0;
-        }
-
-        .achievements li::before {
-            content: '✓';
-            color: #3498db;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-
-        .achievements strong {
-            color: #2c3e50;
-            font-weight: 600;
-        }
-
-        @media (min-width: 768px) {
-            .timeline:before {
-                left: 50%;
-                margin-left: -1.5px;
-            }
-            
-            .experience-card {
-                width: 45%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            
-            .experience-card:nth-child(odd) {
-                margin-right: 55%;
-            }
-            
-            .experience-card:nth-child(even) {
-                margin-left: 55%;
-            }
-            
-            .experience-card:before {
-                left: auto;
-                right: -36px;
-            }
-            
-            .experience-card:nth-child(odd):before {
-                left: -36px;
-                right: auto;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
-            .timeline:before {
-                left: 18px;
-            }
-            
-            .experience-card {
-                width: calc(100% - 60px);
-                margin-left: 60px;
-            }
-            
-            .experience-card:before {
-                left: -36px;
-            }
-            
-            .experience-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .logo-container {
-                margin-bottom: 15px;
-            }
-            
-            .location-date {
-                flex-direction: column;
-                gap: 5px;
-            }
-        }
-        /* End of new experience section styles */
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 40px 0;
-        }
-        .feature-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 25%;
-            transition: transform 0.3s ease-in-out;
-        }
-        .feature-card:hover {
-            transform: scale(1.1);
-        }
-        .feature-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-
-         .hover-animate {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .hover-animate:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-    }
-    
-    .skill-list {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .badge {
-        font-weight: normal;
-        font-size: 0.85rem;
-    }
-        
-        .footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Publications Section Styles */
-        #publications {
-            padding: 60px 0;
-            background-color: #f9f9f9;
-        }
-        
-        .publication-section {
-            margin-bottom: 30px;
-        }
-        
-        .publication-section h3 {
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        
-        .publication-item {
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 3px solid #3498db;
-            transition: transform 0.3s ease;
-        }
-        
-        .publication-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        
-        .publication-item p {
-            margin-bottom: 0;
-            color: #555;
-            line-height: 1.6;
-        }
-        
-        .publication-item .authors {
-            font-style: italic;
-            color: #777;
-            margin-top: 8px;
-        }
-        
-        .view-all {
-            text-align: center;
-            margin-top: 30px;
-        }
-        
-        .view-all a {
-            display: inline-block;
-            padding: 8px 20px;
-            background: #3498db;
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        
-        .view-all a:hover {
-            background: #2980b9;
-        }
-    </style>
+</style>
 </head>
 <body>
-    <header class="header-content">
-        <h1>Mafizur Rahman</h1>
-        <p>PhD in Electrical Engineering | Machine Learning Researcher</p>
-        <div class="social-links">
-            <a href="https://scholar.google.com/citations?user=FEtLYxoAAAAJ&hl=en"><i class="fa-brands fa-google-scholar"></i></a>
-            <a href="https://github.com/mafizurrahman"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/mafizur-rahman-0153301ab/"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:rmafizur10@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </header>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Mafizur Rahman</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="btn btn-primary" href="https://drive.google.com/file/d/1ft9a5WicCdA4OuLcIvYd0APVq3ATK1yH/view?usp=sharing" target="_blank">Download CV</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-<!-- Option 2: Timeline-based Education with Sidebar About -->
-<section id="about-education" class="section py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <!-- About Me Sidebar -->
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="position-sticky" style="top: 100px;">
-                    <div class="text-center mb-4">
-                        <img src="profile.jpg" alt="Mafizur Rahman" class="img-fluid rounded-circle mb-3" style="width: 180px; height: 180px; object-fit: cover; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        <h2 class="fw-bold">Mafizur Rahman</h2>
-                        <p class="text-muted">Machine Learning Researcher</p>
-                        <div class="d-flex justify-content-center gap-3 mb-3">
-                            <a href="https://scholar.google.com/citations?user=FEtLYxoAAAAJ&hl=en" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fa-brands fa-google-scholar"></i></a>
-                            <a href="https://github.com/mafizurrahman" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/mafizur-rahman-0153301ab/" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-linkedin"></i></a>
-                            <a href="mailto:rmafizur10@gmail.com" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="p-4 bg-white rounded shadow-sm">
-                        <h4 class="border-bottom pb-2 mb-3">About Me</h4>
 
-<p class="small mt-2">
-  I am a Ph.D. student in <strong>Electrical Engineering</strong> at 
-  <a href="https://www.pvamu.edu/" target="_blank">Prairie View A&amp;M University</a>, 
-  where I am affiliated with the <strong>CREDIT Center</strong> and advised by 
-  Prof. Lijun Qian. My research lies at the intersection of 
-  <strong>hardware-aware AI, analog in-memory computing, and multi-agent language models</strong>, 
-  with a particular interest in making AI systems more efficient, reliable, and interpretable.
-</p>
+<nav>
+ <div class="wrap">
+  <a class="mark" href="#top">MR</a>
+  <ul>
+   <li><a href="#about">About</a></li>
+   <li><a href="#news">News</a></li>
+   <li><a href="#experience">Experience</a></li>
+   <li><a href="#publications">Publications</a></li>
+   <li><a href="#projects">Projects</a></li>
+  </ul>
+ </div>
+</nav>
 
-<p class="small mt-2">
-  My work spans <strong>hardware–software co-design for LLM inference</strong>, 
-  transformer robustness under analog hardware non-idealities, LLM routing, and 
-  higher-order attention mechanisms. I have collaborated with 
-  <strong>Sandia National Laboratories</strong> on analog neural network inference 
-  and with researchers at the <strong>University of Southern California</strong> 
-  on sparse higher-order attention and interpretability.
-</p>
+<header class="herobg" id="top"><canvas id="net" aria-hidden="true"></canvas><div class="wrap hero">
+ <div class="avatar"><span>MR</span><img src="profile.jpg" alt="Portrait of Mafizur Rahman" onerror="this.remove()"></div>
+ <div>
+  <h1>Mafizur Rahman</h1>
+  <p class="role">Ph.D. Candidate, Electrical Engineering · CREDIT Center, Prairie View A&amp;M University</p>
+  <div class="links">
+   <a class="primary" href="https://drive.google.com/file/d/1ft9a5WicCdA4OuLcIvYd0APVq3ATK1yH/view?usp=sharing" target="_blank" rel="noopener">CV</a>
+   <a href="https://scholar.google.com/citations?user=FEtLYxoAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+   <a href="https://github.com/mafizurrahman" target="_blank" rel="noopener">GitHub</a>
+   <a href="https://www.linkedin.com/in/mafizur-rahman-0153301ab/" target="_blank" rel="noopener">LinkedIn</a>
+   <a href="mailto:rmafizur10@gmail.com">Email</a>
+  </div>
+ </div>
+</div></header>
 
-<p class="small mt-2">
-  Broadly, I am interested in understanding how model architecture, routing, 
-  memory movement, and hardware constraints interact—and how these insights can 
-  be used to design <strong>efficient and reliable AI systems</strong> for real-world deployment.
-</p>
-                    
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Education Timeline Section -->
-            <div class="col-lg-8">
-                <h2 class="text-center mb-4"><i class="fas fa-graduation-cap me-2"></i>Academic Journey</h2>
-                
-                <div class="position-relative mb-5">
-                    <!-- Timeline vertical line -->
-                    <div class="position-absolute h-100" style="width: 3px; background: linear-gradient(to bottom, #3498db, #2c3e50); left: 7px; top: 10px;"></div>
-                    
-                    <!-- PhD -->
-                    <div class="d-flex mb-4">
-                        <div class="position-relative">
-                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 16px; height: 16px; border: 3px solid white; box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); z-index: 1;"></div>
-                        </div>
-                        <div class="card shadow-sm ms-4 border-0 flex-grow-1 hover-animate">
-                            <div class="card-body p-4">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <h5 class="fw-bold text-primary mb-0">Ph.D. in Electrical Engineering</h5>
-                                    <span class="badge bg-primary">2025 - 2028 (Expected)</span>
-                                </div>
-                                <h6 class="text-muted">Prairie View A&M University, Texas, USA</h6>
-                                <p class="mb-0">Advisor: Dr. Lijun Qian</p>
-                                <p class="text-muted mt-2">Research Focus: Hardware-aware AI, Neural Network Interpretability, and multi-agent language models</p>
-                                <p class="small mt-2">Working on novel techniques to convert digital neural networks to analog implementations while preserving accuracy and performance. Investigating the impact of hardware constraints on model architecture and learning algorithms.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Masters -->
-                    <div class="d-flex mb-4">
-                        <div class="position-relative">
-                            <div class="rounded-circle bg-success d-flex align-items-center justify-content-center" style="width: 16px; height: 16px; border: 3px solid white; box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.3); z-index: 1;"></div>
-                        </div>
-                        <div class="card shadow-sm ms-4 border-0 flex-grow-1 hover-animate">
-                            <div class="card-body p-4">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <h5 class="fw-bold text-success mb-0">M.Sc in Computer Science</h5>
-                                    <span class="badge bg-success">2023 - 2024</span>
-                                </div>
-                                <h6 class="text-muted">Prairie View A&M University, Texas, USA</h6>
-                                <p><strong>CGPA: 4.0/4.0</strong> (Highest Distinction)</p>
-                                <p class="text-muted">Thesis: Comparative Analysis of DNN Inference Performance in Analog Accelerators</p>
-                                <p class="small mt-2">Conducted extensive research on the performance differences between digital and analog implementations of convolutional neural networks, with a focus on efficiency and accuracy trade-offs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Bachelor's -->
-                    <div class="d-flex">
-                        <div class="position-relative">
-                            <div class="rounded-circle bg-info d-flex align-items-center justify-content-center" style="width: 16px; height: 16px; border: 3px solid white; box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3); z-index: 1;"></div>
-                        </div>
-                        <div class="card shadow-sm ms-4 border-0 flex-grow-1 hover-animate">
-                            <div class="card-body p-4">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <h5 class="fw-bold text-info mb-0">B.Sc. in Computer Science & Engineering</h5>
-                                    <span class="badge bg-info">2016 - 2020</span>
-                                </div>
-                                <h6 class="text-muted">East West University, Dhaka, Bangladesh</h6>
-                                <p><strong>CGPA: 3.71/4.0</strong></p>
-                                <p class="small mt-2">Thesis focused on Bengali sentiment analysis using deep neural networks. Received full tuition fee free merit scholarship for academic excellence in 2019.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <!-- Additional Certifications -->
-                <div class="card shadow-sm border-0 mt-5">
-                    <div class="card-header bg-light">
-                        <h4 class="mb-0"><i class="fas fa-certificate me-2"></i>Additional Certifications</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="badge bg-primary-subtle text-primary p-2 rounded-circle me-3">
-                                        <i class="fas fa-award"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Fundamentals of Deep Learning</h6>
-                                        <p class="small text-muted mb-0">NVIDIA Deep Learning Institute - 2023</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="badge bg-primary-subtle text-primary p-2 rounded-circle me-3">
-                                        <i class="fas fa-award"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Ai for Everyone</h6>
-                                        <p class="small text-muted mb-0">Duke University(Coursera) - 2020</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-            <!-- 
-<section id="features" class="section">
-        <div class="container">
-            <h2 class="text-center">Featured</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <img src="spotlight.png" alt="Deep Learning">
-                    <h3>Research Spotlight</h3>
-                    <p>My research work has been featured in Prairie View A&M University's Student Spotlight for my research on
-analog accelerators for deep neural networks (DNNs).</p>
-                </div>
-                <div class="feature-card">
-                    <img src="sandia.png" alt="Neurocomputing">
-                    <h3>Visited Sandia National Labs</h3>
-                    <p>Last summer 24, I visited Sandia National Labs in Albuquerque, NM, to explore CrossSim, a Python-based crossbar simulator for analog in-memory computing in DNNs. I collaborated with the CrossSim team to integrate it into a Multi-Image Super Resolution (MISR) DNN, testing the effects of cell bits and ADC input profiling.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="outstanding.jpeg" alt="AI Optimization">
-                    <h3>Outstanding Student Award</h3>
-                    <p>Received "Outstanding Computer Science Student Award 2025" for academic excellence and contributions.</p>
-                </div>
-                
-            </div>
-    </section> -->
+<main class="wrap">
 
-<!-- Publications Section -->
-<section id="publications" class="section">
-    <div class="container">
-        <h2 class="section-title"><i class="fas fa-book"></i> Research Publications</h2>
-        
-       
-        <div class="publication-section">
-            <h3>Conference Publications</h3>
-     
-        <div class="publication-item">
-                <p><strong>	
-Modeling Triplet Interactions Beyond Pairwise Attention </strong></p>
-                <p>AACL-IJCNLP 2026 (Findings)</p>
-                <p class="authors">M. Rahman, and L. Qian
-            </p>
-            </div>
-            
-        <div class="publication-item">
-                <p><strong>	
-Leakage-Aware Uncertainty Estimation for Robust Deep Learning Side-Channel Analysis </strong></p>
-                <p>IEEE HOST, 2027 (Among top 15%)</p>
-                <p class="authors">M. Rahman, T. Sharmin, M. Rana, M. Khan, A. Kulkarni and L. Qian
-            </p>
-            </div>
-            
-            <div class="publication-item">
-                <p><strong>	
-Attention Under Attack: Analog Noise Effects and Mechanistic Vulnerabilities in Transformer Models</strong></p>
-                <p>ACL Main Conference, 2026</p>
-                <p class="authors">M. Rahman, and L. Qian.</p>
-            </div>
-
-            
-            <div class="publication-item">
-                <p><strong>Do Mathematical LLMs Survive Analog Inference?</strong></p>
-                <p>NeurIPS 2026 Workshop MATH-AI</p>
-                <p class="authors">M. Rahman, M. M. M. Khan, and L. Qian</p>
-            </div>
-            
-            <div class="publication-item">
-                <p><strong>Reliability-Aware Metacognitive Routing for Cost-Efficient Mathematical Reasoning</strong></p>
-                <p>NeurIPS 2026 Workshop MATH-AI</p>
-                <p class="authors">M. Rahman, and L. Qian</p>
-            </div>
-
-            
-            <div class="publication-item">
-                <p><strong>	
-Understanding Metacognition in Multi-Agent LLMs: Routing, Not Reasoning</strong></p>
-                <p>International Conference on Learning Representations (ICLR), AIWILD Workshop, 2026</p>
-                <p class="authors">M. Rahman, and L. Qian.</p>
-            </div>
-
-            
-            <div class="publication-item">
-                <p><strong>Metacognitive Arbitration as Uncertainty Compression in Multi-Agent Language Models.</strong></p>
-                <p>Proceedings of 42nd The Conference on Uncertainty in Artificial Intelligence (UAI), 2026</p>
-                <p class="authors">M. Rahman, and L. Qian.</p>
-            </div>
-            
-            
-            
-            
-            <div class="publication-item">
-                <p><strong>A Survey on Actionable Interpretability in Large Language Models.</strong></p>
-                <p>Proceedings of the 35th International Joint Conference on Artificial Intelligence (IJCAI), 2026</p>
-                <p class="authors">J. Cai, M. Rahman, J. Enouen, Y. Liu, and L. Qian.</p>
-            </div>
-
-            <div class="publication-item">
-                <p><strong>Comparative Analysis of Inference Performance of Pre-trained Deep Neural Networks in Analog Accelerators</strong></p>
-                <p>23rd IEEE International Conference on Machine Learning and Applications (ICMLA-24), Accepted and Presented, 2024</p>
-                <p class="authors">M. Rahman, M. Huang, L. Li, and L. Qian.</p>
-            </div>
-        </div>
-
-         <div class="publication-section">
-    <h3>Journal Publications</h3>
-
-    <div class="publication-item">
-        <p><strong>Comparative Analysis of Inference Performance of Pre-trained Convolutional Neural Networks in Analog Accelerators</strong></p>
-        <p>IEEE Transactions on Emerging Topics in Computational Intelligence (IF: 6.5), 2025</p>
-        <p class="authors">M. Rahman, L. Qian.</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>Evaluating Pretrained Deep Learning Models for Image Classification Against Individual and Ensemble Adversarial Attacks</strong></p>
-        <p>IEEE ACCESS (IF: 3.6), 2024</p>
-        <p class="authors">M. Rahman, P. Roy, S. Frizell, L. Qian.</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>A Dynamic Strategy for Classifying Sentiment from Bengali Text by Utilizing Word2Vector Model</strong></p>
-        <p>Journal of Information Technology Research (JITR), 2022</p>
-        <p class="authors">M. Rahman, M.R.A. Talukder, L.A. Setu, A.K. Das.</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>A Predictive Analysis of Chronic Kidney Disease by Exploring Important Features</strong></p>
-        <p>International Journal of Computing and Digital Systems (IJCDS), 2022</p>
-        <p class="authors">M. Rahman, L. Islam, M. Rana, M.Z. Tazim, J.F. Sorna, S.T. Alvi.</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>A Contact Tracing Model for COVID-19 using Mobile Crowdsourcing</strong></p>
-        <p>International Journal on Advanced Science, Engineering and Information Technology (IJASEIT), 2021</p>
-        <p class="authors">L. Islam, M. Rahman, N. Ahmad, T. Sharmin, J.F. Sorna.</p>
-    </div>
-
-    <div class="publication-item">
-        <p><strong>A Blockchain-Based Crowdsourced Task Assessment Framework using Smart Contract</strong></p>
-        <p>International Journal of Advanced Computer Science and Applications (IJACSA), 2021</p>
-        <p class="authors">L. Islam, S.T. Alvi, M. Rahman, A.A. Prova, M.N. Hossain, J.F. Sorna, M.N. Uddin.</p>
-    </div>
-</div>
-        
-        
-        <div class="view-all">
-            <a href="#" class="btn">View All Publications</a>
-        </div>
-    </div>
+<section id="about" class="about">
+ <h2>About</h2>
+ <p>I am a Ph.D. student in Electrical Engineering (expected 2028) at <a href="https://www.pvamu.edu/" target="_blank" rel="noopener">Prairie View A&amp;M University</a>, advised by Prof. Lijun Qian. I earned my M.Sc. in Computer Science from the same university (CGPA 4.0/4.0) and my B.Sc. in Computer Science &amp; Engineering from East West University, Dhaka. My research sits at the intersection of hardware-aware AI, analog in-memory computing, and multi-agent language models, with the goal of making AI systems more efficient, reliable, and interpretable.</p>
+ <p>My work spans hardware–software co-design for LLM inference, transformer robustness under analog hardware non-idealities, LLM routing, and higher-order attention. I have collaborated with Sandia National Laboratories on analog neural network inference and with researchers at the University of Southern California on sparse higher-order attention and interpretability.</p>
 </section>
 
-<!-- New Experience Section -->
-<section id="experience" class="section">
-    <div class="container">
-        <h2 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h2>
-        
-        <div class="timeline">
-            <!-- CREDIT Center Experience -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="logo-container">
-                        <img src="pvamu.jpg" alt="CREDIT Center Logo" class="exp-logo">
-                    </div>
-                    <div class="title-container">
-                        <h3 class="position">Graduate Research Assistant</h3>
-                        <h4 class="organization">CREDIT Center, Prairie View A&M University</h4>
-                        <div class="location-date">
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
-                            <span class="date"><i class="far fa-calendar-alt"></i> September 2023 – Present</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-body">
-                    <ul class="achievements">
-                        <li>Collaborated with <strong>Sandia National Labs</strong> to convert a PyTorch-based DNN for multi-frame super-resolution to an analog DNN, achieving <strong>98%</strong> of digital performance benchmarks.</li>
-                        <li>Successfully implemented conversion of pretrained digital DNNs to analog DNNs while managing hardware nonlinearities for image classification, maintaining <strong>98-99% accuracy</strong> on benchmark datasets.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Baylor University Experience -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="logo-container">
-                        <img src="BU.png" alt="Baylor University Logo" class="exp-logo">
-                    </div>
-                    <div class="title-container">
-                        <h3 class="position">Graduate Research Assistant</h3>
-                        <h4 class="organization">Baylor University</h4>
-                        <div class="location-date">
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> Texas, USA</span>
-                            <span class="date"><i class="far fa-calendar-alt"></i> January 2022 – December 2022</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-body">
-                    <ul class="achievements">
-                        <li>Conducted comprehensive research on Human ES and IMR90 Fibroblasts cells, discovering <strong>100%</strong> interaction frequency for chromosome 07.</li>
-                        <li>Performed comparative analysis of normalization techniques for Hi-C datasets, identifying <strong>minimum absolute value scaling</strong> as the optimal methodology.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- East West University Experience -->
-            <div class="experience-card">
-                <div class="experience-header">
-                    <div class="logo-container">
-                        <img src="ewu.png" alt="East West University Logo" class="exp-logo">
-                    </div>
-                    <div class="title-container">
-                        <h3 class="position">Undergraduate Teaching Assistant</h3>
-                        <h4 class="organization">East West University</h4>
-                        <div class="location-date">
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
-                            <span class="date"><i class="far fa-calendar-alt"></i> September 2018 – April 2020</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="experience-body">
-                    <ul class="achievements">
-                        <li>Developed comprehensive lab manuals and instructional materials for courses including <strong>Structured Programming</strong>, <strong>Numerical Methods</strong>, and <strong>Discrete Mathematics</strong>.</li>
-                        <li>Provided personalized guidance to students during laboratory sessions, significantly enhancing their practical understanding of complex programming concepts.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<section id="news">
+ <h2>Recent News</h2>
+ <ul class="news">
+  <li><span class="badge b1">2026</span><div>Paper <em>Modeling Triplet Interactions Beyond Pairwise Attention</em> accepted to <b>AACL-IJCNLP 2026</b> (Findings).</div></li>
+  <li><span class="badge b2">2026</span><div>Paper <em>Leakage-Aware Uncertainty Estimation for Deep Learning Side-Channel Analysis</em> accepted to <b>IEEE HOST 2027</b> (top 15%).</div></li>
+  <li><span class="badge b3">2026</span><div>Two papers accepted to the <b>NeurIPS 2026 MATH-AI Workshop</b>.</div></li>
+  <li><span class="badge b4">2026</span><div><em>Attention Under Attack</em> accepted to the <b>ACL 2026</b> main conference; metacognitive arbitration paper accepted to <b>UAI 2026</b>.</div></li>
+  <li><span class="badge b1">2026</span><div>Survey on actionable interpretability in LLMs accepted to <b>IJCAI 2026</b>.</div></li>
+ </ul>
 </section>
 
-
-    <!-- Technical Skills Section -->
-<section id="skills" class="section py-5 bg-white">
-    <div class="container">
-        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Technical Skills</h2>
-        
-        <div class="row g-4">
-            <!-- Programming Languages -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-code text-primary"></i>
-                            </div>
-                            <h4 class="card-title mb-0">Languages</h4>
-                        </div>
-                        <div class="skill-list">
-                            <span class="badge bg-light text-dark border m-1 p-2">Python</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">SQL</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">C++</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">HTML</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">CSS</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Libraries & Frameworks -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-brain text-success"></i>
-                            </div>
-                            <h4 class="card-title mb-0">Libraries</h4>
-                        </div>
-                        <div class="skill-list">
-                            <span class="badge bg-light text-dark border m-1 p-2">TensorFlow</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">PyTorch</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Scikit-Learn</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Pandas</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">NumPy</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Databases -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-info bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-database text-info"></i>
-                            </div>
-                            <h4 class="card-title mb-0">Databases</h4>
-                        </div>
-                        <div class="skill-list">
-                            <span class="badge bg-light text-dark border m-1 p-2">MySQL</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Technical Skills -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-warning bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-microchip text-warning"></i>
-                            </div>
-                            <h4 class="card-title mb-0">Special Skills</h4>
-                        </div>
-                        <div class="skill-list">
-                            <span class="badge bg-light text-dark border m-1 p-2">LLMs</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Crossbar Simulator</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">ML Interpretability</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Supervised Unsupervised Model</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Data Analysis</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Model Optimization</span>
-                             <span class="badge bg-light text-dark border m-1 p-2">Software Development</span>
-                            <span class="badge bg-light text-dark border m-1 p-2">Bash Scripting</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Soft Skills -->
-            <div class="col-12 mt-4">
-                <div class="card border-0 shadow-sm hover-animate">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-danger bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-users text-danger"></i>
-                            </div>
-                            <h4 class="card-title mb-0">Professional Skills</h4>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3 mb-3 mb-md-0">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                    <span>Problem Solving</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3 mb-md-0">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                    <span>Communication</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3 mb-3 mb-md-0">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                    <span>Teamwork</span>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="d-flex align-items-center">
-                                    <i class="fas fa-check-circle text-success me-2"></i>
-                                    <span>Leadership</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<section id="experience">
+ <h2>Experience</h2>
+ <div class="item">
+  <div class="when">Sep 2023 – Present</div>
+  <div>
+   <h4>Graduate Research Assistant</h4>
+   <div class="org">CREDIT Center, Prairie View A&amp;M University</div>
+   <ul>
+    <li>Collaborated with Sandia National Laboratories to convert a PyTorch multi-frame super-resolution DNN to an analog DNN, reaching 98% of digital performance.</li>
+    <li>Converted pretrained digital DNNs to analog implementations under hardware nonlinearities, retaining 98–99% accuracy on benchmark image classification datasets.</li>
+   </ul>
+  </div>
+ </div>
+ <div class="item">
+  <div class="when">Jan 2022 – Dec 2022</div>
+  <div>
+   <h4>Graduate Research Assistant</h4>
+   <div class="org">Baylor University</div>
+   <ul>
+    <li>Analyzed Hi-C data for Human ES and IMR90 fibroblast cells, including chromosome-level interaction frequency.</li>
+    <li>Compared normalization techniques for Hi-C datasets and identified minimum absolute value scaling as the best-performing method.</li>
+   </ul>
+  </div>
+ </div>
+ <div class="item">
+  <div class="when">Sep 2018 – Apr 2020</div>
+  <div>
+   <h4>Undergraduate Teaching Assistant</h4>
+   <div class="org">East West University</div>
+   <ul>
+    <li>Developed lab manuals for Structured Programming, Numerical Methods, and Discrete Mathematics, and supported students during lab sessions.</li>
+   </ul>
+  </div>
+ </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="section py-5 bg-light">
-    <div class="container">
-        <h2 class="section-title"><i class="fas fa-project-diagram"></i> Research Projects</h2>
-        
-        <div class="row g-4">
-            <!-- Project 1 -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <h4 class="card-title text-primary">Ensemble Adversarial Attack</h4>
-                            <span class="badge bg-primary">Jan 2024 – May 2024</span>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-light text-dark border m-1">Python</span>
-                                <span class="badge bg-light text-dark border m-1">PyTorch</span>
-                                <span class="badge bg-light text-dark border m-1">Pandas</span>
-                                <span class="badge bg-light text-dark border m-1">Matplotlib</span>
-                            </div>
-                        </div>
-                        <p class="card-text">Developed new ensemble adversarial attacks integrating three single attacks for pre-trained DNN model evaluation.</p>
-                        <p class="card-text">Our proposed ensemble adversarial attacks reduce DNN performance by over 59%, even with applied defenses.</p>
-                        <div class="d-flex justify-content-end mt-3">
-                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 2 -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <h4 class="card-title text-primary">Farmers Market Platform</h4>
-                            <span class="badge bg-primary">Jan 2024 – May 2024</span>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-light text-dark border m-1">PHP</span>
-                                <span class="badge bg-light text-dark border m-1">MySQL</span>
-                                <span class="badge bg-light text-dark border m-1">JavaScript</span>
-                                <span class="badge bg-light text-dark border m-1">jQuery</span>
-                                <span class="badge bg-light text-dark border m-1">HTML/CSS</span>
-                                <span class="badge bg-light text-dark border m-1">Bootstrap</span>
-                            </div>
-                        </div>
-                        <p class="card-text">Developed the Farmers Market platform, integrating secure farmer and buyer registration, product categorization, and encrypted credential management.</p>
-                        <p class="card-text">Designed and implemented core functionalities including bid tracking, order processing, shopping cart systems, and visitor interaction logging.</p>
-                        <div class="d-flex justify-content-end mt-3">
-                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 3 -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <h4 class="card-title text-primary">Bless: Interactive Prototype</h4>
-                            <span class="badge bg-primary">Jan 2022 – May 2022</span>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-light text-dark border m-1">Flutter</span>
-                                <span class="badge bg-light text-dark border m-1">Dart</span>
-                            </div>
-                        </div>
-                        <p class="card-text">Developed an interactive prototype enabling doctors to receive gratitude from patients via text messages.</p>
-                        <p class="card-text">Our system outperformed verbal expressions of gratitude, with a 12.5% increase in positive feeling scores.</p>
-                        <div class="d-flex justify-content-end mt-3">
-                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Project 4 -->
-            <div class="col-lg-6">
-                <div class="card h-100 border-0 shadow-sm hover-animate">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <h4 class="card-title text-primary">Bengali Sentiment Analysis</h4>
-                            <span class="badge bg-primary">Sep 2019 – Apr 2020</span>
-                        </div>
-                        <div class="mb-3">
-                            <div class="d-flex flex-wrap">
-                                <span class="badge bg-light text-dark border m-1">Python</span>
-                                <span class="badge bg-light text-dark border m-1">TensorFlow</span>
-                                <span class="badge bg-light text-dark border m-1">Keras</span>
-                                <span class="badge bg-light text-dark border m-1">Pandas</span>
-                                <span class="badge bg-light text-dark border m-1">Matplotlib</span>
-                            </div>
-                        </div>
-                        <p class="card-text">Classified five sentiments in lengthy Bengali text using deep learning models, surpassing the accuracy of prior works by more than 3%.</p>
-                        <p class="card-text">Compared CBOW and Skip-gram models, focusing on hyperparameter tuning for sentiment prediction.</p>
-                        <div class="d-flex justify-content-end mt-3">
-                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- View All Projects Button -->
-            <div class="col-12 text-center mt-4">
-                <a href="https://github.com/mafizurrahman" class="btn btn-primary">View All Projects</a>
-            </div>
-        </div>
-    </div>
-</section>
-                
-    <footer class="footer">
-        <p>&copy; 2025 Mafizur Rahman. All Rights Reserved.</p>
-    </footer>
+<section id="publications">
+ <h2>Publications</h2>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <h3>Conference &amp; Workshop</h3>
+ <div class="pub"><b>Modeling Triplet Interactions Beyond Pairwise Attention</b><span>AACL-IJCNLP 2026 (Findings)</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>Leakage-Aware Uncertainty Estimation for Robust Deep Learning Side-Channel Analysis</b><span>IEEE HOST 2027 <span class="tag">Top 15%</span></span><span><em>M. Rahman</em>, T. Sharmin, M. Rana, M. Khan, A. Kulkarni, L. Qian</span></div>
+ <div class="pub"><b>Attention Under Attack: Analog Noise Effects and Mechanistic Vulnerabilities in Transformer Models</b><span>ACL 2026 (Main Conference)</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>Do Mathematical LLMs Survive Analog Inference?</b><span>NeurIPS 2026 Workshop on MATH-AI</span><span><em>M. Rahman</em>, M. M. M. Khan, L. Qian</span></div>
+ <div class="pub"><b>Reliability-Aware Metacognitive Routing for Cost-Efficient Mathematical Reasoning</b><span>NeurIPS 2026 Workshop on MATH-AI</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>Understanding Metacognition in Multi-Agent LLMs: Routing, Not Reasoning</b><span>ICLR 2026, AIWILD Workshop</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>Metacognitive Arbitration as Uncertainty Compression in Multi-Agent Language Models</b><span>UAI 2026 (42nd Conference on Uncertainty in Artificial Intelligence)</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>A Survey on Actionable Interpretability in Large Language Models</b><span>IJCAI 2026 (35th International Joint Conference on Artificial Intelligence)</span><span>J. Cai, <em>M. Rahman</em>, J. Enouen, Y. Liu, L. Qian</span></div>
+ <div class="pub"><b>Comparative Analysis of Inference Performance of Pre-trained Deep Neural Networks in Analog Accelerators</b><span>IEEE ICMLA 2024</span><span><em>M. Rahman</em>, M. Huang, L. Li, L. Qian</span></div>
+
+ <h3>Journal</h3>
+ <div class="pub"><b>Comparative Analysis of Inference Performance of Pre-trained Convolutional Neural Networks in Analog Accelerators</b><span>IEEE Transactions on Emerging Topics in Computational Intelligence, 2025</span><span><em>M. Rahman</em>, L. Qian</span></div>
+ <div class="pub"><b>Evaluating Pretrained Deep Learning Models for Image Classification Against Individual and Ensemble Adversarial Attacks</b><span>IEEE Access, 2024</span><span><em>M. Rahman</em>, P. Roy, S. Frizell, L. Qian</span></div>
+ <div class="pub"><b>A Dynamic Strategy for Classifying Sentiment from Bengali Text by Utilizing Word2Vector Model</b><span>Journal of Information Technology Research, 2022</span><span><em>M. Rahman</em>, M. R. A. Talukder, L. A. Setu, A. K. Das</span></div>
+ <div class="pub"><b>A Predictive Analysis of Chronic Kidney Disease by Exploring Important Features</b><span>International Journal of Computing and Digital Systems, 2022</span><span><em>M. Rahman</em>, L. Islam, M. Rana, M. Z. Tazim, J. F. Sorna, S. T. Alvi</span></div>
+ <div class="pub"><b>A Contact Tracing Model for COVID-19 using Mobile Crowdsourcing</b><span>International Journal on Advanced Science, Engineering and Information Technology, 2021</span><span>L. Islam, <em>M. Rahman</em>, N. Ahmad, T. Sharmin, J. F. Sorna</span></div>
+ <div class="pub"><b>A Blockchain-Based Crowdsourced Task Assessment Framework using Smart Contract</b><span>International Journal of Advanced Computer Science and Applications, 2021</span><span>L. Islam, S. T. Alvi, <em>M. Rahman</em>, A. A. Prova, M. N. Hossain, J. F. Sorna, M. N. Uddin</span></div>
+
+ <p><a href="https://scholar.google.com/citations?user=FEtLYxoAAAAJ&hl=en" target="_blank" rel="noopener">Full list on Google Scholar →</a></p>
+</section>
+
+<section id="projects">
+ <h2>Selected Projects</h2>
+ <div class="item">
+  <div class="when">Jan – May 2024</div>
+  <div>
+   <h4>Ensemble Adversarial Attacks</h4>
+   <p>Designed ensemble attacks combining three single attacks to evaluate pretrained DNNs; performance dropped by over 59% even with defenses applied. <span class="org">Python, PyTorch</span></p>
+  </div>
+ </div>
+ <div class="item">
+  <div class="when">Sep 2019 – Apr 2020</div>
+  <div>
+   <h4>Bengali Sentiment Analysis</h4>
+   <p>Five-class sentiment classification of long Bengali text, improving on prior work by over 3% through CBOW/Skip-gram comparison and tuning. <span class="org">Python, TensorFlow, Keras</span></p>
+  </div>
+ </div>
+ <p><a href="https://github.com/mafizurrahman" target="_blank" rel="noopener">More on GitHub →</a></p>
+</section>
+
+<section id="skills">
+ <h2>Technical Skills</h2>
+ <dl class="skills">
+  <dt>Languages</dt><dd>Python, C++, SQL, JavaScript, HTML/CSS, Bash</dd>
+  <dt>Frameworks</dt><dd>PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy</dd>
+  <dt>Research areas</dt><dd>LLMs, ML interpretability, analog in-memory computing (CrossSim), model optimization</dd>
+ </dl>
+</section>
+
+</main>
+
+<footer>
+ <div class="wrap">Prairie View A&amp;M University · Prairie View, Texas</div>
+</footer>
+
+<script>
+(function(){
+ var c=document.getElementById('net'),x=c.getContext('2d'),P=[],W,H,
+ still=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+ function size(){var r=c.parentNode.getBoundingClientRect(),d=window.devicePixelRatio||1;
+  W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+  var n=Math.min(70,Math.round(W/16));P=[];
+  for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});}
+ function frame(){
+  var col=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#0369a1';
+  x.clearRect(0,0,W,H);x.strokeStyle=col;x.fillStyle=col;
+  for(var i=0;i<P.length;i++){var p=P[i];
+   if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}
+   x.globalAlpha=.55;x.beginPath();x.arc(p.x,p.y,2,0,6.283);x.fill();
+   for(var j=i+1;j<P.length;j++){var q=P[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<120){x.globalAlpha=.28*(1-d/120);x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke();}}}
+  if(!still)requestAnimationFrame(frame);}
+ size();frame();
+ window.addEventListener('resize',function(){size();if(still)frame();});
+})();
+</script>
 </body>
 </html>
