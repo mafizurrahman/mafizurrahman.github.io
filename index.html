@@ -112,6 +112,12 @@ footer{background:var(--bg2);color:var(--muted);border-top:3px solid var(--accen
  .item,.skills{grid-template-columns:1fr}
  h1{font-size:2rem}
 }
+
+.skills dd{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:7px;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:4px 14px 4px 10px;font-size:.9rem;font-weight:500}
+.chip img{width:18px;height:18px}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+ 
 </style>
 </head>
 <body>
@@ -268,16 +274,16 @@ footer{background:var(--bg2);color:var(--muted);border-top:3px solid var(--accen
 <section id="skills">
  <h2>Technical Skills</h2>
  <dl class="skills">
-  <dt>Languages</dt><dd>Python, C++, SQL, JavaScript, HTML/CSS, Bash</dd>
-  <dt>Frameworks</dt><dd>PyTorch, TensorFlow, Scikit-learn, Pandas, NumPy</dd>
-  <dt>Research areas</dt><dd>LLMs, ML interpretability, analog in-memory computing (CrossSim), model optimization</dd>
+  <dt>Languages</dt><dd><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" onerror="this.remove()">Python</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" onerror="this.remove()">C++</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" loading="lazy" onerror="this.remove()">SQL</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg" alt="" loading="lazy" onerror="this.remove()">JavaScript</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg" alt="" loading="lazy" onerror="this.remove()">HTML</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg" alt="" loading="lazy" onerror="this.remove()">CSS</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bash/bash-original.svg" alt="" loading="lazy" onerror="this.remove()">Bash</span></dd>
+  <dt>Frameworks</dt><dd><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pytorch/pytorch-original.svg" alt="" loading="lazy" onerror="this.remove()">PyTorch</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tensorflow/tensorflow-original.svg" alt="" loading="lazy" onerror="this.remove()">TensorFlow</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/scikitlearn/scikitlearn-original.svg" alt="" loading="lazy" onerror="this.remove()">Scikit-learn</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/pandas/pandas-original.svg" alt="" loading="lazy" onerror="this.remove()">Pandas</span><span class="chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/numpy/numpy-original.svg" alt="" loading="lazy" onerror="this.remove()">NumPy</span></dd>
+  <dt>Research areas</dt><dd><span class="chip">LLMs</span><span class="chip">ML interpretability</span><span class="chip">Analog in-memory computing (CrossSim)</span><span class="chip">Model optimization</span></dd>
  </dl>
 </section>
 
 </main>
 
 <footer>
- <div class="wrap">Prairie View A&amp;M University · Prairie View, Texas</div>
+ <div class="wrap">&copy; <span id="yr">2026</span> Mafizur Rahman. All rights reserved.
 </footer>
 
 <script>
